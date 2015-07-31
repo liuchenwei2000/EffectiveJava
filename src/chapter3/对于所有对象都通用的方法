@@ -1,0 +1,3 @@
+
+尽管Object是一个具体类，但是设计它主要是为了扩展。它的所有非final方法（如equals、hashCode、toString、clone和finalize）都有明确的通用约定，
+因为它们都是为了要被覆盖（override）而设计的。任何一个类，它在覆盖这些方法的时候有责任遵守这些通用约定。
