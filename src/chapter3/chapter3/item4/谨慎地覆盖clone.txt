@@ -1,0 +1,29 @@
+                                                             谨慎地覆盖clone
+
+
+正常情况下，一个类除了声明实现了Cloneable之外，就是对Object中受保护的clone方法提供公有的访问途径。如下：
+
+public Foo clone(){
+	try{
+		return (Foo) super.clone();
+	}catch(Exception e){
+	}
+}
+
+因为 Java5 中支持协变返回类型，所以 clone() 方法可以返回具体的类对象。
+所有实现了Cloneable接口的类都应该用一个公有的方法覆盖 clone。此公有方法首先调用super.clone，然后修正任何需要修正的域。
+
+clone方法是另一个构造器，必须确保它不会伤害到原始的对象，并确保正确地创建被克隆对象中的约束关系。
+
+
+另一个实现对象拷贝的好办法是提供一个拷贝构造器或拷贝工厂。
+拷贝构造器，只是一个构造器，其唯一参数的类型是包含该构造器的类。
+
+public Foo(Foo foo);
+
+拷贝工厂：
+
+public static Foo newInstance(Foo foo);
+
+这种方式比Cloneable/clone方法具有更多的优势，它们不依赖于某一种很有风险的、语言之外的对象创建机制；不要求遵守尚未制定好文档的规范；
+不会与final 域的正常使用发生冲突；不会抛出不必要的异常；不需要进行强制类型转换。
