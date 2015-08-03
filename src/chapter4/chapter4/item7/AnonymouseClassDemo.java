@@ -53,6 +53,4 @@ public class AnonymouseClassDemo {
 			}
 		};
 	}
-	// 在复杂的类型安全枚举类型(它要为每个实例提供单独的子类)中，用于公有的静态final域的初始化器中。
-	// 示例见 chapter4.item18.StaticMemberClassDemo1中的Operation类。
 }

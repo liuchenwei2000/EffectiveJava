@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * 非静态成员类的用法(适配器类)演示
+ * 非静态成员类的用法（适配器类）演示
  * <p>
  * 定义一个Adapter，它允许外部类的一个实例被看做另一个不相关的类的实例。
  * 

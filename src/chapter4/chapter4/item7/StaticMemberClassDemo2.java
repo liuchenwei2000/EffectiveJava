@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 静态成员类的第二个用法(私有组件类)演示
+ * 静态成员类的第二个用法（私有组件类）演示
  * <p>
  * 用来代表外围类对象的组件。
  * 
