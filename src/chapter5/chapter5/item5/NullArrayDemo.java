@@ -6,7 +6,10 @@ package chapter5.item5;
 import java.util.Arrays;
 
 /**
- * 返回零长度的数组而不是null演示
+ * 返回零长度的数组或者集合，而不是null
+ * <p>
+ * 对于一个返回null而不是零长度数组或者集合的方法，几乎每次用到该方法时都需要进行非空检查。
+ * 所以对于这种场景，最好返回零长度数组或者不可变的空集合（Collections.emptyList等）。
  * 
  * @author 刘晨伟
  * 
@@ -19,8 +22,6 @@ public class NullArrayDemo {
 	 */
 	public static void main(String[] args) {
 		int[] array = getArray1();
-		// 返回null会要求客户方必须有额外的代码来处理null返回值，每次用到该方法都会需要这种曲折的处理方式。
-		// 另外，返回null的方式也会是返回数组的方法本身更加复杂。
 		if (array == null || Arrays.asList(array).contains(1)) {
 			System.out.println("1");
 		}
