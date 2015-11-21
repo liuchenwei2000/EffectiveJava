@@ -4,13 +4,13 @@
 package chapter7.item1;
 
 /**
- * Òì³£ÓÃÓÚÕý³£µÄ¿ØÖÆÁ÷Ê¾Àý
+ * å¼‚å¸¸ç”¨äºŽæ­£å¸¸çš„æŽ§åˆ¶æµç¤ºä¾‹
  * <p>
- * ±¾ÀýÊÇ·´Ãæ½Ì²Ä£¬²»ÒªÕâÃ´×ö¡£
+ * æœ¬ä¾‹æ˜¯åé¢æ•™æï¼Œä¸è¦è¿™ä¹ˆåšã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê8ÔÂ5ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´8æœˆ5æ—¥
  */
 public class HorribleException {
 

@@ -6,11 +6,11 @@ package chapter3.item2;
 import java.util.HashMap;
 
 /**
- * ±ê×¼HashCode·½·¨ÊµÏÖ
+ * æ ‡å‡†HashCodeæ–¹æ³•å®ç°
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-2-17
+ * åˆ›å»ºæ—¥æœŸï¼š2011-2-17
  */
 public class HashCodeDemo {
 	
@@ -19,13 +19,13 @@ public class HashCodeDemo {
 	 */
 	public static void main(String[] args) {
 		/*
-		 * Class1ÒòÎªÃ»ÓĞ¸ÄĞ´hashCode·½·¨£¬µ¼ÖÂHashMapĞĞÎªÒì³£
+		 * Class1å› ä¸ºæ²¡æœ‰æ”¹å†™hashCodeæ–¹æ³•ï¼Œå¯¼è‡´HashMapè¡Œä¸ºå¼‚å¸¸
 		 */
 		HashMap<Class1,String> map1 = new HashMap<Class1,String>();
 		map1.put(new Class1(1), "class1");
 		System.out.println(map1.get(new Class1(1)));
 		/*
-		 * Class2¸ÄĞ´ÁËhashCode·½·¨£¬ËùÒÔHashMap±íÏÖÕı³£
+		 * Class2æ”¹å†™äº†hashCodeæ–¹æ³•ï¼Œæ‰€ä»¥HashMapè¡¨ç°æ­£å¸¸
 		 */
 		HashMap<Class2,String> map2 = new HashMap<Class2,String>();
 		map2.put(new Class2(2), "class2");
@@ -34,7 +34,7 @@ public class HashCodeDemo {
 }
 
 /**
- * Õâ¸öÀàÔÚ¸ÄĞ´equals·½·¨Ö®ºóÃ»ÓĞ¸ÄĞ´hashCode·½·¨
+ * è¿™ä¸ªç±»åœ¨æ”¹å†™equalsæ–¹æ³•ä¹‹åæ²¡æœ‰æ”¹å†™hashCodeæ–¹æ³•
  */
 class Class1 {
 	
@@ -58,7 +58,7 @@ class Class1 {
 }
 
 /**
- * Õâ¸öÀàÔÚ¸ÄĞ´equals·½·¨Ö®ºóÍ¬Ê±¸ÄĞ´ÁËhashCode·½·¨
+ * è¿™ä¸ªç±»åœ¨æ”¹å†™equalsæ–¹æ³•ä¹‹ååŒæ—¶æ”¹å†™äº†hashCodeæ–¹æ³•
  */
 class Class2 {
 

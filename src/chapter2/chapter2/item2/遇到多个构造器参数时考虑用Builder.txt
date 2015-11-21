@@ -1,16 +1,16 @@
-                                                                                    �����������������ʱ������Builder
+                                                                                    遇到多个构造器参数时考虑用Builder
 
 
-�������;�̬�����и���ͬ�ľ����ԣ����Ƕ����ܺܺõ���չ�������Ŀ�ѡ��������һ�����д����Ŀ�ѡ����ʱ������������ʵ�ַ�ʽ��
-1���ص�������ģʽ��TelescopingConstructorPattern.java��
-2��JavaBeans ģʽ��JavaBeansPattern.java��
-3��Builder ģʽ��BuilderPattern.java��
+构造器和静态工厂有个共同的局限性，它们都不能很好地扩展到大量的可选参数。当一个类有大量的可选参数时，往往有三种实现方式：
+1，重叠构造器模式（TelescopingConstructorPattern.java）
+2，JavaBeans 模式（JavaBeansPattern.java）
+3，Builder 模式（BuilderPattern.java）
 
-Buider ģʽ��ȱ��
+Buider 模式的缺点
 
-Ϊ�˴������󣬱����ȴ������� Builder ������Ȼ���� Builder �Ŀ�����ʵ���в���ô���ԣ�������ĳЩע�����ܵ�����£����ܾͳ������⡣
-Builder ģʽ���ص�������ģʽ�����߳��������ֻ���кܶ������ʱ���ʹ�ã�����4��������������
+为了创建对象，必须先创建它的 Builder 对象，虽然创建 Builder 的开销在实践中不那么明显，但是在某些注重性能的情况下，可能就成了问题。
+Builder 模式比重叠构造器模式更加冗长，因此它只在有很多参数的时候才使用，比如4个或更多个参数。
 
 
-�����Ĺ��������߾�̬�����о��ж�����������������ʱ��Builder ģʽ�����ֲ�����ѡ���ر��ǵ�������������ǿ�ѡ��ʱ��
-Builder ģʽ�ȴ�ͳ���ص�������ģʽ�����ڿͻ��˴���ı�д���Ķ���Ҳ�� JavaBeans ����ȫ��
+如果类的构造器或者静态工厂中具有多个参数，设计这种类时，Builder 模式就是种不错的选择，特别是当大多数参数都是可选的时候。
+Builder 模式比传统的重叠构造器模式更易于客户端代码的编写和阅读，也比 JavaBeans 更安全。

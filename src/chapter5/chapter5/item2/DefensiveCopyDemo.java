@@ -6,11 +6,11 @@ package chapter5.item2;
 import java.util.Date;
 
 /**
- * ·ÀÓùĞÔ¿½±´(defensive copy)ÑİÊ¾
+ * é˜²å¾¡æ€§æ‹·è´(defensive copy)æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-17
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-17
  */
 public class DefensiveCopyDemo {
 
@@ -41,9 +41,9 @@ public class DefensiveCopyDemo {
 }
 
 /**
- * Ê±¼ä¶ÎÀà£¨²»°²È«µÄ£©
+ * æ—¶é—´æ®µç±»ï¼ˆä¸å®‰å…¨çš„ï¼‰
  * <p>
- * Õâ¸öÀàµÄÔ¼ÊøÌõ¼şÊÇ£ºÖÜÆÚµÄÆğÊ¼Ê±¼ä²»ÄÜÔÚ½áÊøÊ±¼äÖ®ºó¡£
+ * è¿™ä¸ªç±»çš„çº¦æŸæ¡ä»¶æ˜¯ï¼šå‘¨æœŸçš„èµ·å§‹æ—¶é—´ä¸èƒ½åœ¨ç»“æŸæ—¶é—´ä¹‹åã€‚
  */
 class Period1 {
 
@@ -51,7 +51,7 @@ class Period1 {
 	private final Date endDate;
 
 	public Period1(Date startDate, Date endDate) {
-		// ËäÈ»ÕâÀïÓĞÔ¼ÊøÌõ¼şµÄ¼ì²é£¬µ«ÊÇÍâ½ç´«ÈëµÄ¶ÔÏóÈÔÈ»ÊÇ¿É±äµÄ¡£
+		// è™½ç„¶è¿™é‡Œæœ‰çº¦æŸæ¡ä»¶çš„æ£€æŸ¥ï¼Œä½†æ˜¯å¤–ç•Œä¼ å…¥çš„å¯¹è±¡ä»ç„¶æ˜¯å¯å˜çš„ã€‚
 		if (startDate.compareTo(endDate) > 0) {
 			throw new IllegalArgumentException(startDate + " after " + endDate);
 		}
@@ -60,7 +60,7 @@ class Period1 {
 	}
 
 	/**
-	 * ÏÂÃæÕâÁ½¸ö·ÃÎÊ·½·¨Ìá¹©ÁËÄÚ²¿ĞÅÏ¢µÄ¶ÔÏóÒıÓÃ£¬Ê¹µÃÍâ½ç¿ÉÒÔ¸Ä±äÆä×´Ì¬¡£
+	 * ä¸‹é¢è¿™ä¸¤ä¸ªè®¿é—®æ–¹æ³•æä¾›äº†å†…éƒ¨ä¿¡æ¯çš„å¯¹è±¡å¼•ç”¨ï¼Œä½¿å¾—å¤–ç•Œå¯ä»¥æ”¹å˜å…¶çŠ¶æ€ã€‚
 	 */
 	public Date getStartDate() {
 		return startDate;
@@ -77,9 +77,9 @@ class Period1 {
 }
 
 /**
- * Ê±¼ä¶ÎÀà£¨°²È«µÄ£©
+ * æ—¶é—´æ®µç±»ï¼ˆå®‰å…¨çš„ï¼‰
  * <p>
- * Õâ¸öÀàµÄÔ¼ÊøÌõ¼şÊÇ£ºÖÜÆÚµÄÆğÊ¼Ê±¼ä²»ÄÜÔÚ½áÊøÊ±¼äÖ®ºó¡£
+ * è¿™ä¸ªç±»çš„çº¦æŸæ¡ä»¶æ˜¯ï¼šå‘¨æœŸçš„èµ·å§‹æ—¶é—´ä¸èƒ½åœ¨ç»“æŸæ—¶é—´ä¹‹åã€‚
  */
 class Period2 {
 
@@ -87,7 +87,7 @@ class Period2 {
 	private final Date endDate;
 
 	public Period2(Date startDate, Date endDate) {
-		// ¶ÔÓÚ¹¹Ôìº¯ÊıµÄÃ¿¸ö¿É±ä²ÎÊı½øĞĞ·ÀÓùĞÔ¿½±´(defensive copy)ÊÇ±ØÒªµÄ£¬²¢ÇÒÊ¹ÓÃ¿½±´Ö®ºóµÄ¶ÔÏó×÷ÎªÊµÀıµÄ×é¼ş£¬¶ø²»Ê¹ÓÃÔ­Ê¼µÄ¶ÔÏó¡£
+		// å¯¹äºæ„é€ å‡½æ•°çš„æ¯ä¸ªå¯å˜å‚æ•°è¿›è¡Œé˜²å¾¡æ€§æ‹·è´(defensive copy)æ˜¯å¿…è¦çš„ï¼Œå¹¶ä¸”ä½¿ç”¨æ‹·è´ä¹‹åçš„å¯¹è±¡ä½œä¸ºå®ä¾‹çš„ç»„ä»¶ï¼Œè€Œä¸ä½¿ç”¨åŸå§‹çš„å¯¹è±¡ã€‚
 		this.startDate = new Date(startDate.getTime());
 		this.endDate = new Date(endDate.getTime());
 		if (this.startDate.compareTo(this.endDate) > 0) {
@@ -96,7 +96,7 @@ class Period2 {
 	}
 
 	/**
-	 * ¶ÔÓÚÕâÁ½¸ö·ÃÎÊ·½·¨£¬Ö»Òª·µ»Ø¿É±äÄÚ²¿ÓòµÄ·ÀÓùĞÔ¿½±´¼´¿É¡£
+	 * å¯¹äºè¿™ä¸¤ä¸ªè®¿é—®æ–¹æ³•ï¼Œåªè¦è¿”å›å¯å˜å†…éƒ¨åŸŸçš„é˜²å¾¡æ€§æ‹·è´å³å¯ã€‚
 	 */
 	public Date getStartDate() {
 		return (Date) startDate.clone();

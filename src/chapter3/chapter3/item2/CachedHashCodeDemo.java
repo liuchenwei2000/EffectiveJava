@@ -6,19 +6,19 @@ package chapter3.item2;
 import java.util.Arrays;
 
 /**
- * ���� hash code ��ʾ
+ * 缓存 hash code 演示
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2011-2-18
+ * 创建日期：2011-2-18
  */
 public class CachedHashCodeDemo {
 }
 
 /**
- * ���һ�����ǲ��ɱ�ģ����Ҽ���ɢ����Ĵ��۱Ƚϴ󣬾�Ӧ�ÿ��ǰ�ɢ���뻺���ڶ����ڲ���������ÿ�������ʱ�����¼���ɢ���롣
- * ����������͵Ĵ�������󶼻ᱻ����ɢ�еļ�����Ӧ���ڴ���ʵ����ʱ�����ɢ���롣
- * ���򣬿���ѡ���ӳٳ�ʼ����ɢ���룬һֱ��hashCode����һ�α����õ�ʱ��ų�ʼ����
+ * 如果一个类是不可变的，并且计算散列码的代价比较大，就应该考虑把散列码缓存在对象内部，而不是每次请求的时候都重新计算散列码。
+ * 如果这种类型的大多数对象都会被用作散列的键，就应该在创建实例的时候计算散列码。
+ * 否则，可以选择“延迟初始化”散列码，一直到hashCode被第一次被调用的时候才初始化。
  */
 class Immutable {
 	

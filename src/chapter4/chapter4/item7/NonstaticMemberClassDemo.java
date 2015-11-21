@@ -8,13 +8,13 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * ·Ç¾²Ì¬³ÉÔ±ÀàµÄÓÃ·¨£¨ÊÊÅäÆ÷Àà£©ÑİÊ¾
+ * éé™æ€æˆå‘˜ç±»çš„ç”¨æ³•ï¼ˆé€‚é…å™¨ç±»ï¼‰æ¼”ç¤º
  * <p>
- * ¶¨ÒåÒ»¸öAdapter£¬ËüÔÊĞíÍâ²¿ÀàµÄÒ»¸öÊµÀı±»¿´×öÁíÒ»¸ö²»Ïà¹ØµÄÀàµÄÊµÀı¡£
+ * å®šä¹‰ä¸€ä¸ªAdapterï¼Œå®ƒå…è®¸å¤–éƒ¨ç±»çš„ä¸€ä¸ªå®ä¾‹è¢«çœ‹åšå¦ä¸€ä¸ªä¸ç›¸å…³çš„ç±»çš„å®ä¾‹ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-12
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-12
  */
 public class NonstaticMemberClassDemo {
 	
@@ -26,7 +26,7 @@ public class NonstaticMemberClassDemo {
 		stringList.add("a");
 		stringList.add("b");
 		stringList.add("c");
-		// ¿Í»§¶Ë³ÌĞò¿ÉÒÔÍ¨¹ıÈçÏÂµÄ·½Ê½½«StringListÊµÀı×÷ÎªÒ»¸öIteratorÊµÀıÊ¹ÓÃ¡£
+		// å®¢æˆ·ç«¯ç¨‹åºå¯ä»¥é€šè¿‡å¦‚ä¸‹çš„æ–¹å¼å°†StringListå®ä¾‹ä½œä¸ºä¸€ä¸ªIteratorå®ä¾‹ä½¿ç”¨ã€‚
 		print(stringList.iterator());
 	}
 
@@ -38,35 +38,35 @@ public class NonstaticMemberClassDemo {
 }
 
 /**
- * ×Ö·û´®ÁĞ±í£¬ÕâÊÇÒ»¸öÍâ²¿Àà¡£
+ * å­—ç¬¦ä¸²åˆ—è¡¨ï¼Œè¿™æ˜¯ä¸€ä¸ªå¤–éƒ¨ç±»ã€‚
  */
 class StringList {
 
 	private List<String> list = new ArrayList<String>();
 
 	/**
-	 * Ìí¼ÓÒ»¸ö×Ö·û´®
+	 * æ·»åŠ ä¸€ä¸ªå­—ç¬¦ä¸²
 	 */
 	public void add(String s) {
 		list.add(s);
 	}
 
 	/**
-	 * É¾³ıÖ¸¶¨µÄ×Ö·û´®
+	 * åˆ é™¤æŒ‡å®šçš„å­—ç¬¦ä¸²
 	 */
 	public void remove(String s) {
 		list.remove(s);
 	}
 
 	/**
-	 * ·µ»Ø×Ô¼ºµÄµü´úÆ÷
+	 * è¿”å›è‡ªå·±çš„è¿­ä»£å™¨
 	 */
 	public Iterator<String> iterator() {
 		return new StringListIterator();
 	}
 
 	/**
-	 * ×Ö·û´®ÁĞ±íµÄµü´úÆ÷£¬ÕâÊÇÒ»¸ö·Ç¾²Ì¬³ÉÔ±Àà¡£
+	 * å­—ç¬¦ä¸²åˆ—è¡¨çš„è¿­ä»£å™¨ï¼Œè¿™æ˜¯ä¸€ä¸ªéé™æ€æˆå‘˜ç±»ã€‚
 	 */
 	private class StringListIterator implements Iterator<String> {
 

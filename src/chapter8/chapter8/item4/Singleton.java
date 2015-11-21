@@ -6,11 +6,11 @@ package chapter8.item4;
 import java.io.Serializable;
 
 /**
- * readResolve ÌØÐÔÑÝÊ¾
+ * readResolve ç‰¹æ€§æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê8ÔÂ8ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´8æœˆ8æ—¥
  */
 public class Singleton implements Serializable {
 
@@ -26,11 +26,11 @@ public class Singleton implements Serializable {
 	}
 
 	/**
-	 * ¶ÔÓÚÒ»¸öÕýÔÚ±»·´ÐòÁÐ»¯µÄ¶ÔÏó£¬Èç¹ûËüµÄÀà¶¨ÒåÁËÒ»¸ö readResolve ·½·¨£¬
-	 * ²¢ÇÒ¾ß±¸ÕýÈ·µÄÉùÃ÷£¬ÄÇÃ´ÔÚ·´ÐòÁÐ»¯Ö®ºó£¬£¨·´ÐòÁÐ»¯£©ÐÂ½¨¶ÔÏóÉÏµÄ readResolve ·½·¨¾Í»á±»µ÷ÓÃ¡£
-	 * È»ºó£¬¸Ã·½·¨·µ»ØµÄ¶ÔÏóÒýÓÃ½«±»ÓÃÀ´È¡´ú£¨·´ÐòÁÐ»¯£©ÐÂ½¨µÄ¶ÔÏó¡£
-	 * ÔÚÕâ¸öÌØÐÔµÄ¾ø´ó¶àÊýÓÃ·¨ÖÐ£¬Ö¸ÏòÐÂ½¨¶ÔÏóµÄÒýÓÃ²»ÐèÒªÔÚ±»±£Áô£¬Òò´ËÁ¢¼´³ÉÎªÀ¬»ø»ØÊÕµÄ¶ÔÏó¡£
-	 * Í¬Ê±£¬µ¥Àý¶ÔÏóµÄÐòÁÐ»¯ÐÎÊ½²¢²»ÐèÒª°üº¬ÈÎºÎÊµ¼ÊµÄÊý¾Ý£¬ËùÓÐµÄÊµÀýÓò¶¼Ó¦¸Ã±»ÉùÃ÷Îª transient µÄ¡£
+	 * å¯¹äºŽä¸€ä¸ªæ­£åœ¨è¢«ååºåˆ—åŒ–çš„å¯¹è±¡ï¼Œå¦‚æžœå®ƒçš„ç±»å®šä¹‰äº†ä¸€ä¸ª readResolve æ–¹æ³•ï¼Œ
+	 * å¹¶ä¸”å…·å¤‡æ­£ç¡®çš„å£°æ˜Žï¼Œé‚£ä¹ˆåœ¨ååºåˆ—åŒ–ä¹‹åŽï¼Œï¼ˆååºåˆ—åŒ–ï¼‰æ–°å»ºå¯¹è±¡ä¸Šçš„ readResolve æ–¹æ³•å°±ä¼šè¢«è°ƒç”¨ã€‚
+	 * ç„¶åŽï¼Œè¯¥æ–¹æ³•è¿”å›žçš„å¯¹è±¡å¼•ç”¨å°†è¢«ç”¨æ¥å–ä»£ï¼ˆååºåˆ—åŒ–ï¼‰æ–°å»ºçš„å¯¹è±¡ã€‚
+	 * åœ¨è¿™ä¸ªç‰¹æ€§çš„ç»å¤§å¤šæ•°ç”¨æ³•ä¸­ï¼ŒæŒ‡å‘æ–°å»ºå¯¹è±¡çš„å¼•ç”¨ä¸éœ€è¦åœ¨è¢«ä¿ç•™ï¼Œå› æ­¤ç«‹å³æˆä¸ºåžƒåœ¾å›žæ”¶çš„å¯¹è±¡ã€‚
+	 * åŒæ—¶ï¼Œå•ä¾‹å¯¹è±¡çš„åºåˆ—åŒ–å½¢å¼å¹¶ä¸éœ€è¦åŒ…å«ä»»ä½•å®žé™…çš„æ•°æ®ï¼Œæ‰€æœ‰çš„å®žä¾‹åŸŸéƒ½åº”è¯¥è¢«å£°æ˜Žä¸º transient çš„ã€‚
 	 */
 	private Object readResolve() {
 		return INSTANCE;

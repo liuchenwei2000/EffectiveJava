@@ -1,33 +1,33 @@
-                                                          ����equalsʱҪ����ͨ��Լ��
+                                                          覆盖equals时要遵守通用约定
 
 
-���������Լ����еġ��߼���ȡ������ͬ�ڶ�����ͬ�ĸ�������ҳ���Ҳû�и��� equals ��ʵ����������Ϊ����ʱ����Ҫ���� equals ������
-����Ա������ equals �������Ƚ�����ָ��ֵ��������õ�ʱ��ϣ��֪�������߼����Ƿ���ȣ��������Ƿ�ָ��ͬһ������
-Ϊ���������Ҫ�󣬸�дequals�����Ǳ���ģ�����������Ҳʹ��������ʵ�����Ա�����ӳ����ļ������߼��ϵ�Ԫ�أ���ʹӳ����ͼ��ϱ��ֳ�Ԥ�ڵ���Ϊ��
+如果类具有自己特有的“逻辑相等”概念（不同于对象相同的概念），而且超类也没有覆盖 equals 以实现期望的行为，这时就需要覆盖 equals 方法。
+程序员在利用 equals 方法来比较两个指向值对象的引用的时候，希望知道它们逻辑上是否相等，而不是是否指向同一个对象。
+为了满足这个要求，改写equals方法是必需的，而且这样做也使得这个类的实例可以被用做映射表的键，或者集合的元素，并使映射表和集合表现出预期的行为。
 
 
-���ݹ淶��equals ������Ҫʵ�����µȼ۹�ϵ��
-1���Է��ԡ������κη� null ������ֵx��x.equals(x) ���뷵�� true��
-2���Գ��ԡ������κη� null ������ֵx��y��x.equals(y) �� y.equals(x)�������һ�¡�
-3�������ԡ������κη� null ������ֵx��y��z������� x.equals(y) ���� true������ y.equals(z) ���� true���� x.equals(z) ���뷵��true��
-4��һ���ԡ������κη� null ������ֵx��y��ֻҪ equals �ȽϵĶ�����Ϣû�б��޸ģ���ε��� x.equals(y) ���ؽ������һ�¡�
-5�������κη� null ������ֵx��x.equals(null) ���뷵��false��
+根据规范，equals 方法需要实现如下等价关系：
+1，自反性。对于任何非 null 的引用值x，x.equals(x) 必须返回 true。
+2，对称性。对于任何非 null 的引用值x和y，x.equals(y) 和 y.equals(x)结果必须一致。
+3，传递性。对于任何非 null 的引用值x、y、z，如果有 x.equals(y) 返回 true，并且 y.equals(z) 返回 true，则 x.equals(z) 必须返回true。
+4，一致性。对于任何非 null 的引用值x和y，只要 equals 比较的对象信息没有被修改，多次调用 x.equals(y) 返回结果保持一致。
+5，对于任何非 null 的引用值x，x.equals(null) 必须返回false。
 
 
-ʵ�ָ����� equals ������һ��ԭ��
-1��ʹ�� == ��������顰�����Ƿ�Ϊ��������һ�����á���
-2��ʹ�� instanceof ��������顰�����Ƿ�Ϊ��ȷ�����͡���
-������ǵĻ����򷵻�false��ͨ�������ȷ�����͡���ָequals�������ڵ��Ǹ��ࡣ��Щ����£���ָ������ʵ�ֵ�ĳ���ӿڡ�
-3����ʵ��ת������ȷ�����͡�
-4�����ڸ����е�ÿһ���ؼ��򣬼������е����Ƿ��뵱ǰ�����ж�Ӧ����ֵƥ�䡣
-��ıȽ�˳����ܻ�Ӱ�쵽equals���������ܣ�Ϊ�˻��������ܣ����Ƚ��бȽϵ���Ӧ�������п��ܲ�һ�µ��򣬻����ǱȽϿ�����͵���
-5�������equals����֮��Ӧ�ÿ����Ƿ��ǶԳƵġ����ݵġ�һ�µġ�
+实现高质量 equals 方法的一个原则：
+1，使用 == 操作符检查“参数是否为这个对象的一个引用”。
+2，使用 instanceof 操作符检查“参数是否为正确的类型”。
+如果不是的话，则返回false。通常这里“正确的类型”是指equals方法所在的那个类。有些情况下，是指该类所实现的某个接口。
+3，把实参转换到正确的类型。
+4，对于该类中的每一个关键域，检查参数中的域是否与当前对象中对应的域值匹配。
+域的比较顺序可能会影响到equals方法的性能，为了获得最佳性能，最先进行比较的域应该是最有可能不一致的域，或者是比较开销最低的域。
+5，当完成equals方法之后，应该看其是否是对称的、传递的、一致的。
 
-������һЩ��룺
-1������ equals ��ʱ����Ҫ���� hashCode��
-2����Ҫ��ͼ�� equals �������ڴ������������ȵ�ȥѰ����ֵȼ۹�ϵ��������������鷳�С�
-3����Ҫʹ equals ���������ڲ��ɿ�����Դ����Ӧ�����פ�����ڴ��еĶ���ִ��ȷ���Եļ���������������DB��
-4����Ҫ�� equals �����е�Object�����滻Ϊ���������͡�����ֻ������(overload)�����Ǹ���(override)��
+下面是一些告诫：
+1，覆盖 equals 的时候，总要覆盖 hashCode。
+2，不要企图让 equals 方法过于聪明。如果想过度的去寻求各种等价关系，则很容易陷入麻烦中。
+3，不要使 equals 方法依赖于不可靠的资源。它应该针对驻留在内存中的对象执行确定性的计算而不是网络或者DB。
+4，不要将 equals 声明中的Object对象替换为其他的类型。那样只是重载(overload)而不是覆盖(override)。
 public boolean equals(MyClass o){
   // ...
 }

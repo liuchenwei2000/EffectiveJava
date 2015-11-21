@@ -6,11 +6,11 @@ package chapter2.item6;
 import java.util.EmptyStackException;
 
 /**
- * Ïû³ı¹ıÆÚÒıÓÃ(Obsolete Reference)ÑİÊ¾
+ * æ¶ˆé™¤è¿‡æœŸå¼•ç”¨(Obsolete Reference)æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-12-21
+ * åˆ›å»ºæ—¥æœŸï¼š2010-12-21
  */
 public class EliminateObsoleteReferenceDemo {
 	
@@ -29,7 +29,7 @@ public class EliminateObsoleteReferenceDemo {
 }
 
 /**
- * ÕâÊÇÒ»¸ö×Ô¶¨ÒåµÄÕ»
+ * è¿™æ˜¯ä¸€ä¸ªè‡ªå®šä¹‰çš„æ ˆ
  */
 class Stack {
 	
@@ -46,21 +46,21 @@ class Stack {
 	}
 
 	/**
-	 * Õâ¸ö·½·¨»áÓĞÄÚ´æĞ¹Â©
+	 * è¿™ä¸ªæ–¹æ³•ä¼šæœ‰å†…å­˜æ³„æ¼
 	 */
 	public Object pop1() {
 		if (size == 0) {
 			throw new EmptyStackException();
 		}
 		/*
-		 * ÕâÀï½ö½ö½«¶ÔÏóµ¯³öÕ»£¬µ«ÊÇ²¢Î´Çå³ıÕ»ÄÚ²¿¶Ô¸Ã¶ÔÏóµÄ¹ıÆÚÒıÓÃ£¬¼´elements[size]ÈÔÈ»Ö¸Ïò¸Ã¶ÔÏó
-		 * Èç¹ûÏñEliminateObsoleteReferenceDemo.main()µÄ·½Ê½Ê¹ÓÃÕ»£¬¾Í»áÓĞÄÚ´æĞ¹Â©
+		 * è¿™é‡Œä»…ä»…å°†å¯¹è±¡å¼¹å‡ºæ ˆï¼Œä½†æ˜¯å¹¶æœªæ¸…é™¤æ ˆå†…éƒ¨å¯¹è¯¥å¯¹è±¡çš„è¿‡æœŸå¼•ç”¨ï¼Œå³elements[size]ä»ç„¶æŒ‡å‘è¯¥å¯¹è±¡
+		 * å¦‚æœåƒEliminateObsoleteReferenceDemo.main()çš„æ–¹å¼ä½¿ç”¨æ ˆï¼Œå°±ä¼šæœ‰å†…å­˜æ³„æ¼
 		 */
 		return  elements[--size];
 	}
 	
 	/**
-	 * Õâ¸ö·½·¨²»»áÓĞÄÚ´æĞ¹Â©
+	 * è¿™ä¸ªæ–¹æ³•ä¸ä¼šæœ‰å†…å­˜æ³„æ¼
 	 */
 	public Object pop2() {
 		if (size == 0) {
@@ -68,7 +68,7 @@ class Stack {
 		}
 		Object result = elements[--size];
 		/*
-		 * ÕâÀï²»½ö½ö½«¶ÔÏóµ¯³öÕ»£¬²¢ÇÒÇå³ıÁËÕ»ÄÚ²¿¶Ô¸Ã¶ÔÏóµÄÒıÓÃ£¬¼´½« elements[size] ÉèÎª null
+		 * è¿™é‡Œä¸ä»…ä»…å°†å¯¹è±¡å¼¹å‡ºæ ˆï¼Œå¹¶ä¸”æ¸…é™¤äº†æ ˆå†…éƒ¨å¯¹è¯¥å¯¹è±¡çš„å¼•ç”¨ï¼Œå³å°† elements[size] è®¾ä¸º null
 		 */
 		elements[size] = null;
 		return result;

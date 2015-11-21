@@ -4,11 +4,11 @@
 package chapter6.item4;
 
 /**
- * ×Ö·û´®Æ´½ÓÑÝÊ¾
+ * å­—ç¬¦ä¸²æ‹¼æŽ¥æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-27
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-27
  */
 public class StringAppendDemo {
 
@@ -25,17 +25,17 @@ public class StringAppendDemo {
 		long start = System.currentTimeMillis();
 		appendString(n);
 		long end = System.currentTimeMillis();
-		System.out.println("String " + n + " ´ÎÆ´½Ó£º" + (end - start) + " ms");
+		System.out.println("String " + n + " æ¬¡æ‹¼æŽ¥ï¼š" + (end - start) + " ms");
 
 		start = System.currentTimeMillis();
 		appendStringBuffer(n);
 		end = System.currentTimeMillis();
-		System.out.println("StringBuffer " + n + " ´ÎÆ´½Ó£º" + (end - start) + " ms");
+		System.out.println("StringBuffer " + n + " æ¬¡æ‹¼æŽ¥ï¼š" + (end - start) + " ms");
 
 		start = System.currentTimeMillis();
 		appendStringBuilder(n);
 		end = System.currentTimeMillis();
-		System.out.println("StringBuilder " + n  + " ´ÎÆ´½Ó£º" + (end - start) + " ms");
+		System.out.println("StringBuilder " + n  + " æ¬¡æ‹¼æŽ¥ï¼š" + (end - start) + " ms");
 	}
 
 	private static void appendString(int n) {

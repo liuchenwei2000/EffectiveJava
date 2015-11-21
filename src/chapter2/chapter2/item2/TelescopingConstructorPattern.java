@@ -4,13 +4,13 @@
 package chapter2.item2;
 
 /**
- * ÖØµş¹¹ÔìÆ÷Ä£Ê½Ê¾Àı
+ * é‡å æ„é€ å™¨æ¨¡å¼ç¤ºä¾‹
  * <p>
- * ÖØµş¹¹ÔìÆ÷Ä£Ê½¿ÉĞĞ£¬µ«ÊÇµ±ÓĞĞí¶à²ÎÊıµÄÊ±ºò£¬¿Í»§¶Ë´úÂë»áºÜÄÑ±àĞ´£¬²¢ÇÒÈÔÈ»½ÏÄÑÒÔÔÄ¶Á¡£
+ * é‡å æ„é€ å™¨æ¨¡å¼å¯è¡Œï¼Œä½†æ˜¯å½“æœ‰è®¸å¤šå‚æ•°çš„æ—¶å€™ï¼Œå®¢æˆ·ç«¯ä»£ç ä¼šå¾ˆéš¾ç¼–å†™ï¼Œå¹¶ä¸”ä»ç„¶è¾ƒéš¾ä»¥é˜…è¯»ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê7ÔÂ31ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´7æœˆ31æ—¥
  */
 public class TelescopingConstructorPattern {
 
@@ -25,20 +25,20 @@ public class TelescopingConstructorPattern {
 	}
 
 	/**
-	 * ÖØµş¹¹ÔìÆ÷Ä£Ê½
+	 * é‡å æ„é€ å™¨æ¨¡å¼
 	 */
 	private static class Book {
-		// Ç°Èı¸öÊÇ±ØĞèÊôĞÔ
+		// å‰ä¸‰ä¸ªæ˜¯å¿…éœ€å±æ€§
 		private final String name;
 		private final String author;
 		private final String isbn;
-		// ºóÈı¸öÊÇ¿ÉÑ¡ÊôĞÔ
+		// åä¸‰ä¸ªæ˜¯å¯é€‰å±æ€§
 		private final int edition;
 		private final double price;
 		private final int pages;
 
 		/**
-		 * ³ıÁËÌá¹©Ò»¸öÖ»ÓĞ±ØĞèÊôĞÔµÄ¹¹ÔìÆ÷Íâ£¬»¹ÒªÌá¹©¶à¸ö°üÀ¨¿ÉÑ¡ÊôĞÔµÄ¹¹ÔìÆ÷¡£
+		 * é™¤äº†æä¾›ä¸€ä¸ªåªæœ‰å¿…éœ€å±æ€§çš„æ„é€ å™¨å¤–ï¼Œè¿˜è¦æä¾›å¤šä¸ªåŒ…æ‹¬å¯é€‰å±æ€§çš„æ„é€ å™¨ã€‚
 		 */
 		public Book(String name, String author, String isbn) {
 			this(name, author, isbn, 1, 0, 0);

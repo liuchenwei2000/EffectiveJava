@@ -10,29 +10,29 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * ÆË¿ËÅÆ»¨É«Ã¶¾Ù2
+ * æ‰‘å…‹ç‰ŒèŠ±è‰²æšä¸¾2
  * <p>
- * 3£¬ÔöÇ¿¹¦ÄÜµÄÀàĞÍ°²È«Ã¶¾Ù¡£
+ * 3ï¼Œå¢å¼ºåŠŸèƒ½çš„ç±»å‹å®‰å…¨æšä¸¾ã€‚
  * <p>
- * ÈÎºÎ·½·¨¶¼¿ÉÒÔ±»Ìí¼Óµ½ÀàĞÍ°²È«Ã¶¾ÙÀàÖĞ£¬Ò²¿ÉÒÔÊµÏÖÈÎºÎ½Ó¿Ú(±¾ÀıÊµÏÖÁËSerializable)¡£
+ * ä»»ä½•æ–¹æ³•éƒ½å¯ä»¥è¢«æ·»åŠ åˆ°ç±»å‹å®‰å…¨æšä¸¾ç±»ä¸­ï¼Œä¹Ÿå¯ä»¥å®ç°ä»»ä½•æ¥å£(æœ¬ä¾‹å®ç°äº†Serializable)ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-14
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-14
  */
 public class Suit2 implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	public static final Suit2 CLUBS = new Suit2("clubs");// ºÚÌÒ
-	public static final Suit2 DIAMONDS = new Suit2("diamonds");// ·½¿é
-	public static final Suit2 HEARTS = new Suit2("hearts");// ºìÌÒ
-	public static final Suit2 SPADES = new Suit2("spades");// Ã·»¨
+	public static final Suit2 CLUBS = new Suit2("clubs");// é»‘æ¡ƒ
+	public static final Suit2 DIAMONDS = new Suit2("diamonds");// æ–¹å—
+	public static final Suit2 HEARTS = new Suit2("hearts");// çº¢æ¡ƒ
+	public static final Suit2 SPADES = new Suit2("spades");// æ¢…èŠ±
 
-	// Ë½ÓĞµÄËùÓĞÃ¶¾Ù¶ÔÏóÊı×é
+	// ç§æœ‰çš„æ‰€æœ‰æšä¸¾å¯¹è±¡æ•°ç»„
 	private static final Suit2[] VALUES = { CLUBS, DIAMONDS, HEARTS, SPADES };
 
-	// ¶ÔÍâÌá¹©µÄ¹«ÓĞµÄ·Ç¿É±äµÄËùÓĞÃ¶¾Ù¶ÔÏóÁĞ±í
+	// å¯¹å¤–æä¾›çš„å…¬æœ‰çš„éå¯å˜çš„æ‰€æœ‰æšä¸¾å¯¹è±¡åˆ—è¡¨
 	public static final List<Suit2> VALUES_LIST = Collections.unmodifiableList(Arrays.asList(VALUES));
 	
 	private final String name;
@@ -47,8 +47,8 @@ public class Suit2 implements Serializable {
 	}
 	
 	/**
-	 * ÊµÏÖÁËSerializable ½Ó¿Ú»¹ĞèÒªÌá¹©ÈçÏÂµÄÕâ¸ö·½·¨£¬¸Ã·½·¨»á±»ĞòÁĞ»¯ÏµÍ³×Ô¶¯µ÷ÓÃ¡£
-	 * Ëü±ÜÃâÁËÔÚ·´ĞòÁĞ»¯µÄÊ±ºò²úÉúÖØ¸´µÄ³£Á¿£¬±£Ö¤Ã¿¸öÃ¶¾Ù³£Á¿Ö»ÓĞÒ»¸ö¶ÔÏó×÷ÎªËüµÄ´ú±í¡£
+	 * å®ç°äº†Serializable æ¥å£è¿˜éœ€è¦æä¾›å¦‚ä¸‹çš„è¿™ä¸ªæ–¹æ³•ï¼Œè¯¥æ–¹æ³•ä¼šè¢«åºåˆ—åŒ–ç³»ç»Ÿè‡ªåŠ¨è°ƒç”¨ã€‚
+	 * å®ƒé¿å…äº†åœ¨ååºåˆ—åŒ–çš„æ—¶å€™äº§ç”Ÿé‡å¤çš„å¸¸é‡ï¼Œä¿è¯æ¯ä¸ªæšä¸¾å¸¸é‡åªæœ‰ä¸€ä¸ªå¯¹è±¡ä½œä¸ºå®ƒçš„ä»£è¡¨ã€‚
 	 */
 	private Object readResolve() throws ObjectStreamException {
 		for (Suit2 suit2 : VALUES) {

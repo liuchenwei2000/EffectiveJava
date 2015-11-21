@@ -1,27 +1,27 @@
-                                                                  ������ʵ��Serializable�ӿ�
+                                                                  谨慎地实现Serializable接口
 
 
-ʵ�� Serializable �ӿ��Ǹ�������ĳ�ŵ����������Դ���Ϊ�˸����Ĵ������£�
+实现 Serializable 接口是个很严肃的承诺，必须严肃对待，为此付出的代价如下：
 
-1��һ��һ�����౻�������ʹ�󽵵��ˡ��ı�������ʵ�֡�������ԡ�
+1，一旦一个的类被发布，就大大降低了“改变这个类的实现”的灵活性。
 
-���������Ĭ�ϵ����л���ʽ���������˽�еĺͰ���˽�е�ʵ���򽫶���ɵ����� API ��һ���֣��Ӷ�һ���̶����ƻ��˷�װ��
-�Ժ���Ҫ�ı��������ڲ���ʾ����������ܵ������л���ʽ�Ĳ����ݡ��ڸı��ڲ���ʾ����ͬʱ��Ȼά��ԭ�������л���ʽ��Ҳ�ǿ��ܵģ�
-����ʹ�� ObjectOutputStream.putFields �� ObjectInputStream.readFields �ﵽĿ�ģ�ֻ���������Ƚ����ѣ����һ�������һЩ������
+如果接受了默认的序列化形式，这个类中私有的和包级私有的实例域将都变成导出的 API 的一部分，从而一定程度上破坏了封装。
+以后又要改变这个类的内部表示法，结果可能导致序列化形式的不兼容。在改变内部表示法的同时仍然维持原来的序列化形式，也是可能的，
+可以使用 ObjectOutputStream.putFields 和 ObjectInputStream.readFields 达到目的，只是做起来比较困难，并且还会留下一些隐患。
 
-���л���ʹ����ݱ��ܵ����ƣ���������Ψһ��ʶ���йأ�ͨ��Ҳ����Ϊ���а汾 UID��serial version UID����
-ÿ�������л����඼��һ��Ψһ��ʶ������������������û��ָ��һ����Ϊ serialVersionUID ��˽�о�̬ final�� long ���ֵ��
-ϵͳ�ͻ��Զ��ظ��������������һ�����ӵ�������̣��Ӷ�������ʱ�����ñ�ʶ�š�����Զ�������ֵ���ܵ������ơ�����ʵ�ֵĽӿڵ����ơ�
-�Լ����й��еĺ��ܱ����ĳ�Ա��������Ӱ�졣���ͨ���κη�ʽ�ı�����Щ��Ϣ������������һ������Ҫ�ķ������Զ������� UID Ҳ�ᷢ���仯��
-��ˣ����û������һ����ʽ�� UID�������Խ����⵽�ƻ���������ʱ���� InvalidClassException��
+序列化会使类的演变受到限制，这与流的唯一标识符有关，通常也被称为序列版本 UID（serial version UID）。
+每个可序列化的类都有一个唯一标识号与它相关联，如果类没有指定一个名为 serialVersionUID 的私有静态 final的 long 域的值，
+系统就会自动地根据这个类来调用一个复杂的运算过程，从而在运行时产生该标识号。这个自动产生的值会受到类名称、它所实现的接口的名称、
+以及所有公有的和受保护的成员的名称所影响。如果通过任何方式改变了这些信息，比如增加了一个不重要的方法，自动产生的 UID 也会发生变化。
+因此，如果没有声明一个显式的 UID，兼容性将会遭到破坏，在运行时导致 InvalidClassException。
 
-2�������˳���Bug�Ͱ�ȫ©���Ŀ����ԡ�
+2，增加了出现Bug和安全漏洞的可能性。
 
-����Ĭ�ϵķ����л����ƣ�������ʹ�����Լ����ϵ�⵽�ƻ����Լ����ܵ��Ƿ����ʡ�
+依靠默认的反序列化机制，很容易使对象的约束关系遭到破坏，以及遭受到非法访问。
 
-3�������෢���µİ汾����صĲ��Ը���Ҳ�����ˡ�
+3，随着类发行新的版本，相关的测试负担也增加了。
 
-Ϊ�˼̳ж���Ƶ��࣬Ӧ�þ������ٵ�ȥʵ�� Serializable �ӿڣ��û��Ľӿ�ҲӦ�þ������ٵؼ̳� Serializable �ӿڡ�
+为了继承而设计的类，应该尽可能少地去实现 Serializable 接口，用户的接口也应该尽可能少地继承 Serializable 接口。
 
 
-�ڲ��಻Ӧ��ʵ�� Serializable �ӿڣ���̬��Ա��ȴ����ʵ�� Serializable �ӿڡ�
+内部类不应该实现 Serializable 接口，静态成员类却可以实现 Serializable 接口。

@@ -6,11 +6,11 @@ package chapter5.item4;
 import java.util.Arrays;
 
 /**
- * ¿É±ä²ÎÊýÊ¾Àý
+ * å¯å˜å‚æ•°ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê8ÔÂ3ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´8æœˆ3æ—¥
  */
 public class VarargsDemo {
 
@@ -21,7 +21,7 @@ public class VarargsDemo {
 	}
 
 	/**
-	 * µ±·½·¨ÐèÒª0¸ö»ò¶à¸öÍ¬ÀàÐÍ²ÎÊýÊ±¡£
+	 * å½“æ–¹æ³•éœ€è¦0ä¸ªæˆ–å¤šä¸ªåŒç±»åž‹å‚æ•°æ—¶ã€‚
 	 */
 	static int sum(int... args) {
 		int sum = 0;
@@ -32,7 +32,7 @@ public class VarargsDemo {
 	}
 	
 	/**
-	 * µ±·½·¨ÐèÒª1¸ö»ò¶à¸öÍ¬ÀàÐÍ²ÎÊýÊ±£¬Ê¹ÓÃÏÂÃæµÄ·½Ê½¸üºÃ¡£
+	 * å½“æ–¹æ³•éœ€è¦1ä¸ªæˆ–å¤šä¸ªåŒç±»åž‹å‚æ•°æ—¶ï¼Œä½¿ç”¨ä¸‹é¢çš„æ–¹å¼æ›´å¥½ã€‚
 	 */
 	static int max(int firstArg, int... args) {
 		int max = firstArg;
@@ -45,8 +45,8 @@ public class VarargsDemo {
 	}
 	
 	/**
-	 * ÔÚÖØÊÓÐÔÄÜµÄÇé¿öÏÂ£¬Ê¹ÓÃ¿É±ä²ÎÊý»úÖÆÒªÌØ±ðÐ¡ÐÄ£¬¶ÔËüµÄÃ¿´Îµ÷ÓÃ¶¼»áµ¼ÖÂÒ»´ÎÊý×é·ÖÅäºÍ³õÊ¼»¯¡£
-	 * ¼ÙÉèÈ·¶¨¶ÔÄ³·½·¨µÄµ÷ÓÃÓÐ95%µÄ¿ÉÄÜÐÔÊÇÈý¸ö²ÎÊý»ò¸üÉÙ£¬ÄÇ¾ÍÓ¦¸ÃÉùÃ÷¸Ã·½·¨µÄÎå¸öÖØÔØ£¬ÈçÏÂ£º
+	 * åœ¨é‡è§†æ€§èƒ½çš„æƒ…å†µä¸‹ï¼Œä½¿ç”¨å¯å˜å‚æ•°æœºåˆ¶è¦ç‰¹åˆ«å°å¿ƒï¼Œå¯¹å®ƒçš„æ¯æ¬¡è°ƒç”¨éƒ½ä¼šå¯¼è‡´ä¸€æ¬¡æ•°ç»„åˆ†é…å’Œåˆå§‹åŒ–ã€‚
+	 * å‡è®¾ç¡®å®šå¯¹æŸæ–¹æ³•çš„è°ƒç”¨æœ‰95%çš„å¯èƒ½æ€§æ˜¯ä¸‰ä¸ªå‚æ•°æˆ–æ›´å°‘ï¼Œé‚£å°±åº”è¯¥å£°æ˜Žè¯¥æ–¹æ³•çš„äº”ä¸ªé‡è½½ï¼Œå¦‚ä¸‹ï¼š
 	 */
 	static void foo() {
 	}

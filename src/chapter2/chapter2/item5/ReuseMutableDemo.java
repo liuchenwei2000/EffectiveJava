@@ -7,11 +7,11 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * ÖØÓÃ¿É±ä¶ÔÏóÑÝÊ¾
+ * é‡ç”¨å¯å˜å¯¹è±¡æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-12-21
+ * åˆ›å»ºæ—¥æœŸï¼š2010-12-21
  */
 public class ReuseMutableDemo {
 
@@ -27,7 +27,7 @@ public class ReuseMutableDemo {
 }
 
 /**
- * Ã»ÖØÓÃ¿É±ä¶ÔÏó
+ * æ²¡é‡ç”¨å¯å˜å¯¹è±¡
  */
 class UnreuseMutable {
 
@@ -38,7 +38,7 @@ class UnreuseMutable {
 	}
 
 	/**
-	 * Ã¿´Îµ÷ÓÃÕâ¸ö·½·¨¶¼»áÖØÐÂ´´½¨Ò»¸öCalendar¶ÔÏó£¬Calendar¶ÔÏóÊÇÒ»¸ö¿É±ä¶ÔÏó¡£
+	 * æ¯æ¬¡è°ƒç”¨è¿™ä¸ªæ–¹æ³•éƒ½ä¼šé‡æ–°åˆ›å»ºä¸€ä¸ªCalendarå¯¹è±¡ï¼ŒCalendarå¯¹è±¡æ˜¯ä¸€ä¸ªå¯å˜å¯¹è±¡ã€‚
 	 */
 	public boolean is21Century() {
 		Calendar calendar = Calendar.getInstance();
@@ -48,14 +48,14 @@ class UnreuseMutable {
 }
 
 /**
- * ÖØÓÃ¿É±ä¶ÔÏó
+ * é‡ç”¨å¯å˜å¯¹è±¡
  */
 class ReuseMutable {
 
-	// ½«Calendar¶ÔÏóÌáÉýÎª¾²Ì¬Óò
+	// å°†Calendarå¯¹è±¡æå‡ä¸ºé™æ€åŸŸ
 	private static Calendar calendar = Calendar.getInstance();
 
-	// ÔÚÀà¼ÓÔØµÄÊ±ºò½øÐÐ³õÊ¼»¯£¬ÒòÎªËüµÄÖµÒ»µ©±»¼ÆËã³öÀ´¾Í²»»áÔÙ¸Ä±äÁË
+	// åœ¨ç±»åŠ è½½çš„æ—¶å€™è¿›è¡Œåˆå§‹åŒ–ï¼Œå› ä¸ºå®ƒçš„å€¼ä¸€æ—¦è¢«è®¡ç®—å‡ºæ¥å°±ä¸ä¼šå†æ”¹å˜äº†
 	static {
 		calendar.set(2000, Calendar.JANUARY, 1, 0, 0, 0);
 	}
@@ -67,7 +67,7 @@ class ReuseMutable {
 	}
 
 	/**
-	 * Ã¿´Îµ÷ÓÃÕâ¸ö·½·¨¶¼»áÖØÓÃ¿É±ä¶ÔÏócalendar
+	 * æ¯æ¬¡è°ƒç”¨è¿™ä¸ªæ–¹æ³•éƒ½ä¼šé‡ç”¨å¯å˜å¯¹è±¡calendar
 	 */
 	public boolean is21Century() {
 		return date.compareTo(calendar.getTime()) >= 0;

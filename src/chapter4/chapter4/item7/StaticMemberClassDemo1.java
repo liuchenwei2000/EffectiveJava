@@ -4,13 +4,13 @@
 package chapter4.item7;
 
 /**
- * ¾²Ì¬³ÉÔ±ÀàµÄµÚÒ»¸öÓÃ·¨£¨¹«ÓĞ¸¨ÖúÀà£©ÑİÊ¾
+ * é™æ€æˆå‘˜ç±»çš„ç¬¬ä¸€ä¸ªç”¨æ³•ï¼ˆå…¬æœ‰è¾…åŠ©ç±»ï¼‰æ¼”ç¤º
  * <p>
- * ×÷Îª¹«ÓĞµÄ¸¨ÖúÀà£¬½öµ±ÓëËüµÄÍâ²¿ÀàÒ»ÆğÊ¹ÓÃÊ±²ÅÓĞÒâÒå¡£
+ * ä½œä¸ºå…¬æœ‰çš„è¾…åŠ©ç±»ï¼Œä»…å½“ä¸å®ƒçš„å¤–éƒ¨ç±»ä¸€èµ·ä½¿ç”¨æ—¶æ‰æœ‰æ„ä¹‰ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-12
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-12
  */
 public class StaticMemberClassDemo1 {
 
@@ -18,26 +18,26 @@ public class StaticMemberClassDemo1 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ¿Í»§¶Ë³ÌĞò¿ÉÒÔÍ¨¹ıÈçÏÂµÄ·½Ê½·ÃÎÊÕâĞ©ÔËËã²Ù×÷
+		// å®¢æˆ·ç«¯ç¨‹åºå¯ä»¥é€šè¿‡å¦‚ä¸‹çš„æ–¹å¼è®¿é—®è¿™äº›è¿ç®—æ“ä½œ
 		double result = new Calculator().calculate(1, Calculator.Operation.PLUS, 2);
 		System.out.println(result);
 	}
 }
 
 /**
- * ¼ÆËãÆ÷£¬ÕâÊÇÒ»¸öÍâ²¿Àà
+ * è®¡ç®—å™¨ï¼Œè¿™æ˜¯ä¸€ä¸ªå¤–éƒ¨ç±»
  */
 class Calculator {
 
 	/**
-	 * ¸ù¾İÔËËã²Ù×÷¼ÆËã½á¹û
+	 * æ ¹æ®è¿ç®—æ“ä½œè®¡ç®—ç»“æœ
 	 */
 	public double calculate(double x, Operation op, double y) {
 		return op.eval(x, y);
 	}
 
 	/**
-	 * ÔËËã²Ù×÷£¬ÕâÊÇÒ»¸ö¹«ÓĞµÄ¾²Ì¬ÄÚ²¿Àà
+	 * è¿ç®—æ“ä½œï¼Œè¿™æ˜¯ä¸€ä¸ªå…¬æœ‰çš„é™æ€å†…éƒ¨ç±»
 	 */
 	public static abstract class Operation {
 
@@ -48,7 +48,7 @@ class Calculator {
 		}
 
 		/**
-		 * ·µ»ØÔËËã½á¹û
+		 * è¿”å›è¿ç®—ç»“æœ
 		 */
 		abstract double eval(double x, double y);
 
@@ -57,7 +57,7 @@ class Calculator {
 		}
 
 		/**
-		 * ¼Ó·¨
+		 * åŠ æ³•
 		 */
 		public static final Operation PLUS = new Operation("+") {
 
@@ -68,7 +68,7 @@ class Calculator {
 		};
 
 		/**
-		 * ¼õ·¨
+		 * å‡æ³•
 		 */
 		public static final Operation MINUS = new Operation("-") {
 
@@ -79,7 +79,7 @@ class Calculator {
 		};
 
 		/**
-		 * ³Ë·¨
+		 * ä¹˜æ³•
 		 */
 		public static final Operation TIMES = new Operation("*") {
 
@@ -90,7 +90,7 @@ class Calculator {
 		};
 
 		/**
-		 * ³ı·¨
+		 * é™¤æ³•
 		 */
 		public static final Operation DIVIDE = new Operation("/") {
 

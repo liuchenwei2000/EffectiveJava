@@ -9,14 +9,14 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * ÐòÁÐ»¯´úÀíÄ£Ê½Ê¾Àý
+ * åºåˆ—åŒ–ä»£ç†æ¨¡å¼ç¤ºä¾‹
  * <p>
- * ÐòÁÐ»¯´úÀíÄ£Ê½µÄ¹¦ÄÜ±È±£»¤ÐÔ¿½±´¸ü¼ÓÇ¿´ó£¬ÒòÎªËüÔÊÐí·´ÐòÁÐ»¯ÊµÀýÓÐ×ÅÓëÔ­Ê¼ÐòÁÐ»¯ÊµÀý²»Í¬µÄÀà¡£
- * µ«Í¬Ê±Ò²ËðÊ§ÁËÒ»Ð©ÐÔÄÜ¡£
+ * åºåˆ—åŒ–ä»£ç†æ¨¡å¼çš„åŠŸèƒ½æ¯”ä¿æŠ¤æ€§æ‹·è´æ›´åŠ å¼ºå¤§ï¼Œå› ä¸ºå®ƒå…è®¸ååºåˆ—åŒ–å®žä¾‹æœ‰ç€ä¸ŽåŽŸå§‹åºåˆ—åŒ–å®žä¾‹ä¸åŒçš„ç±»ã€‚
+ * ä½†åŒæ—¶ä¹ŸæŸå¤±äº†ä¸€äº›æ€§èƒ½ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê8ÔÂ8ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´8æœˆ8æ—¥
  */
 public final class Period implements Serializable {
 
@@ -45,11 +45,11 @@ public final class Period implements Serializable {
 	}
 	
 	/**
-	 * ÍâÎ§Àà¼°Æä´úÀíÀà¶¼±ØÐëÊµÏÖ Serializable ½Ó¿Ú¡£
+	 * å¤–å›´ç±»åŠå…¶ä»£ç†ç±»éƒ½å¿…é¡»å®žçŽ° Serializable æŽ¥å£ã€‚
 	 * <p>
-	 * µÚÒ»²½£¬Îª¿ÉÐòÁÐ»¯µÄÀàÌí¼ÓÒ»¸öË½ÓÐµÄ¾²Ì¬Ç¶Ì×Àà£¬¾«È·µØ±íÊ¾ÍâÎ§ÀàÊµÀýµÄÂß¼­×´Ì¬¡£
-	 * Õâ¸öÇ¶Ì×Àà±»³Æ×÷ÐòÁÐ»¯´úÀí£¨Serialization Proxy£©£¬ËüÓ¦¸ÃÓÐÒ»¸öµ¥¶ÀµÄ¹¹ÔìÆ÷£¬Æä²ÎÊýÀàÐÍ¾ÍÊÇÆäÍâÎ§Àà¡£
-	 * Õâ¸ö¹¹ÔìÆ÷Ö»´ÓËüµÄ²ÎÊýÖÐ¸´ÖÆÊý¾Ý£¬²»ÐèÒªÈÎºÎÒ»ÖÂÐÔ¼ì²é»òÕß±£»¤ÐÔ¿½±´¡£
+	 * ç¬¬ä¸€æ­¥ï¼Œä¸ºå¯åºåˆ—åŒ–çš„ç±»æ·»åŠ ä¸€ä¸ªç§æœ‰çš„é™æ€åµŒå¥—ç±»ï¼Œç²¾ç¡®åœ°è¡¨ç¤ºå¤–å›´ç±»å®žä¾‹çš„é€»è¾‘çŠ¶æ€ã€‚
+	 * è¿™ä¸ªåµŒå¥—ç±»è¢«ç§°ä½œåºåˆ—åŒ–ä»£ç†ï¼ˆSerialization Proxyï¼‰ï¼Œå®ƒåº”è¯¥æœ‰ä¸€ä¸ªå•ç‹¬çš„æž„é€ å™¨ï¼Œå…¶å‚æ•°ç±»åž‹å°±æ˜¯å…¶å¤–å›´ç±»ã€‚
+	 * è¿™ä¸ªæž„é€ å™¨åªä»Žå®ƒçš„å‚æ•°ä¸­å¤åˆ¶æ•°æ®ï¼Œä¸éœ€è¦ä»»ä½•ä¸€è‡´æ€§æ£€æŸ¥æˆ–è€…ä¿æŠ¤æ€§æ‹·è´ã€‚
 	 */
 	private static class SerializationProxy implements Serializable {
 
@@ -67,13 +67,13 @@ public final class Period implements Serializable {
 		}
 		
 		/**
-		 * µÚËÄ²½£¬ÔÚ SerializationProxy ÀàÖÐÌá¹©Ò»¸ö readResolve ·½·¨£¬Ëü·µ»ØÒ»¸öÂß¼­ÉÏÏàµ±µÄÍâÎ§ÀàµÄÊµÀý¡£
-		 * Õâ¸ö·½·¨µÄ³öÏÖ£¬µ¼ÖÂÐòÁÐ»¯ÏµÍ³ÔÚ·´ÐòÁÐ»¯Ê±½«ÐòÁÐ»¯´úÀí×ª±ä»ØÍâÎ§ÀàµÄÊµÀý¡£
+		 * ç¬¬å››æ­¥ï¼Œåœ¨ SerializationProxy ç±»ä¸­æä¾›ä¸€ä¸ª readResolve æ–¹æ³•ï¼Œå®ƒè¿”å›žä¸€ä¸ªé€»è¾‘ä¸Šç›¸å½“çš„å¤–å›´ç±»çš„å®žä¾‹ã€‚
+		 * è¿™ä¸ªæ–¹æ³•çš„å‡ºçŽ°ï¼Œå¯¼è‡´åºåˆ—åŒ–ç³»ç»Ÿåœ¨ååºåˆ—åŒ–æ—¶å°†åºåˆ—åŒ–ä»£ç†è½¬å˜å›žå¤–å›´ç±»çš„å®žä¾‹ã€‚
 		 * <p>
-		 * Õâ¸ö readResolve ·½·¨½ö½öÀûÓÃ¹«ÓÐ API ´´½¨ÁËÍâÎ§ÀàµÄÊµÀý£¬ÕâÕýÊÇ¸ÃÄ£Ê½µÄ÷ÈÁ¦ËùÔÚ¡£
-		 * Ëü¼«´óµØÏû³ýÁËÐòÁÐ»¯»úÖÆÖÐÓïÑÔ±¾ÉíÖ®ÍâµÄÌØÕ÷£¬ÒòÎª·´ÐòÁÐ»¯ÊµÀýÊÇÀûÓÃÓë´´½¨ÆäËûÈÎºÎÊµÀýÒ»ÑùµÄ¹¹ÔìÆ÷£¨¾²Ì¬¹¤³§£©¶ø´´½¨µÄ¡£
-		 * ÕâÑù¾Í²»±Øµ¥¶ÀÈ·±£±»·´ÐòÁÐ»¯µÄÊµÀýÒ»¶¨Òª×ñÊØÀàµÄÔ¼ÊøÌõ¼þ£¬ÒòÎªÈç¹û¸ÃÀàµÄ¹¹ÔìÆ÷£¨¾²Ì¬¹¤³§£©½¨Á¢ÁËÕâÐ©Ô¼ÊøÌõ¼þ£¬
-		 * ²¢ÇÒËüµÄÊµÀý·½·¨ÔÚÎ¬³Ö×ÅÕâÐ©Ô¼ÊøÌõ¼þ£¬¾Í¿ÉÒÔÈ·ÐÅÐòÁÐ»¯Ò²»áÎ¬³ÖÕâÐ©Ô¼ÊøÌõ¼þ¡£
+		 * è¿™ä¸ª readResolve æ–¹æ³•ä»…ä»…åˆ©ç”¨å…¬æœ‰ API åˆ›å»ºäº†å¤–å›´ç±»çš„å®žä¾‹ï¼Œè¿™æ­£æ˜¯è¯¥æ¨¡å¼çš„é­…åŠ›æ‰€åœ¨ã€‚
+		 * å®ƒæžå¤§åœ°æ¶ˆé™¤äº†åºåˆ—åŒ–æœºåˆ¶ä¸­è¯­è¨€æœ¬èº«ä¹‹å¤–çš„ç‰¹å¾ï¼Œå› ä¸ºååºåˆ—åŒ–å®žä¾‹æ˜¯åˆ©ç”¨ä¸Žåˆ›å»ºå…¶ä»–ä»»ä½•å®žä¾‹ä¸€æ ·çš„æž„é€ å™¨ï¼ˆé™æ€å·¥åŽ‚ï¼‰è€Œåˆ›å»ºçš„ã€‚
+		 * è¿™æ ·å°±ä¸å¿…å•ç‹¬ç¡®ä¿è¢«ååºåˆ—åŒ–çš„å®žä¾‹ä¸€å®šè¦éµå®ˆç±»çš„çº¦æŸæ¡ä»¶ï¼Œå› ä¸ºå¦‚æžœè¯¥ç±»çš„æž„é€ å™¨ï¼ˆé™æ€å·¥åŽ‚ï¼‰å»ºç«‹äº†è¿™äº›çº¦æŸæ¡ä»¶ï¼Œ
+		 * å¹¶ä¸”å®ƒçš„å®žä¾‹æ–¹æ³•åœ¨ç»´æŒç€è¿™äº›çº¦æŸæ¡ä»¶ï¼Œå°±å¯ä»¥ç¡®ä¿¡åºåˆ—åŒ–ä¹Ÿä¼šç»´æŒè¿™äº›çº¦æŸæ¡ä»¶ã€‚
 		 */
 		private Object readResolve(){
 			return new Period(start, end);
@@ -81,17 +81,17 @@ public final class Period implements Serializable {
 	}
 	
 	/**
-	 * µÚ¶þ²½£¬½«ÏÂÃæµÄ writeReplace ·½·¨Ìí¼Óµ½ÍâÎ§ÀàÖÐ¡£
-	 * Õâ¸ö·½·¨µÄ´æÔÚµ¼ÖÂÐòÁÐ»¯ÏµÍ³²úÉúÒ»¸ö SerializationProxy ÊµÀý£¬´úÌæÍâÎ§ÀàµÄÊµÀý¡£
-	 * writeReplace ·½·¨ÔÚÐòÁÐ»¯Ö®Ç°£¬½«ÍâÎ§ÀàµÄÊµÀý×ª±ä³ÉÁËËüµÄÐòÁÐ»¯´úÀíÀàµÄÊµÀý¡£
+	 * ç¬¬äºŒæ­¥ï¼Œå°†ä¸‹é¢çš„ writeReplace æ–¹æ³•æ·»åŠ åˆ°å¤–å›´ç±»ä¸­ã€‚
+	 * è¿™ä¸ªæ–¹æ³•çš„å­˜åœ¨å¯¼è‡´åºåˆ—åŒ–ç³»ç»Ÿäº§ç”Ÿä¸€ä¸ª SerializationProxy å®žä¾‹ï¼Œä»£æ›¿å¤–å›´ç±»çš„å®žä¾‹ã€‚
+	 * writeReplace æ–¹æ³•åœ¨åºåˆ—åŒ–ä¹‹å‰ï¼Œå°†å¤–å›´ç±»çš„å®žä¾‹è½¬å˜æˆäº†å®ƒçš„åºåˆ—åŒ–ä»£ç†ç±»çš„å®žä¾‹ã€‚
 	 */
 	private Object writeReplace() {
 		return new SerializationProxy(this);
 	}
 	
 	/**
-	 * µÚÈý²½£¬ÓÐÁËÉÏÃæµÄ writeReplace ·½·¨Ö®ºó£¬ÐòÁÐ»¯ÏµÍ³ÓÀÔ¶²»»á²úÉúÍâÎ§ÀàµÄÐòÁÐ»¯ÊµÀý¡£
-	 * µ«ÊÇ¹¥»÷ÕßÓÐ¿ÉÄÜÎ±Ôì£¬ÆóÍ¼Î¥·´¸ÃÀàµÄÔ¼ÊøÌõ¼þ£¬ÎªÁË·À·¶ÕâÖÖ¹¥»÷£¬Ö»ÒªÔÚÍâÎ§ÀàÖÐÌí¼Ó readObject ·½·¨¼´¿É¡£
+	 * ç¬¬ä¸‰æ­¥ï¼Œæœ‰äº†ä¸Šé¢çš„ writeReplace æ–¹æ³•ä¹‹åŽï¼Œåºåˆ—åŒ–ç³»ç»Ÿæ°¸è¿œä¸ä¼šäº§ç”Ÿå¤–å›´ç±»çš„åºåˆ—åŒ–å®žä¾‹ã€‚
+	 * ä½†æ˜¯æ”»å‡»è€…æœ‰å¯èƒ½ä¼ªé€ ï¼Œä¼å›¾è¿åè¯¥ç±»çš„çº¦æŸæ¡ä»¶ï¼Œä¸ºäº†é˜²èŒƒè¿™ç§æ”»å‡»ï¼Œåªè¦åœ¨å¤–å›´ç±»ä¸­æ·»åŠ  readObject æ–¹æ³•å³å¯ã€‚
 	 */ 
 	private void readObject(ObjectInputStream ois) throws InvalidObjectException{
 		throw new InvalidObjectException("Proxy required");

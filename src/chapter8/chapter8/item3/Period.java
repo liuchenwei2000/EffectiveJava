@@ -9,11 +9,11 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * ±£»¤ĞÔµØ±àĞ´ readObject ·½·¨Ê¾Àı
+ * ä¿æŠ¤æ€§åœ°ç¼–å†™ readObject æ–¹æ³•ç¤ºä¾‹
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê8ÔÂ8ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´8æœˆ8æ—¥
  */
 public final class Period implements Serializable {
 
@@ -42,7 +42,7 @@ public final class Period implements Serializable {
 	}
 	
 	/**
-	 * ¶ÔÓÚÃ¿¸ö¿ÉĞòÁĞ»¯µÄ²»¿É±äÀà£¬Èç¹û°üº¬ÁËË½ÓĞµÄ¿É±ä×é¼ş£¬ÄÇÔÚËüµÄ readObject ·½·¨ÖĞ£¬±ØĞëÒª¶ÔÕâĞ©×é¼ş½øĞĞ±£»¤ĞÔ¿½±´¡£
+	 * å¯¹äºæ¯ä¸ªå¯åºåˆ—åŒ–çš„ä¸å¯å˜ç±»ï¼Œå¦‚æœåŒ…å«äº†ç§æœ‰çš„å¯å˜ç»„ä»¶ï¼Œé‚£åœ¨å®ƒçš„ readObject æ–¹æ³•ä¸­ï¼Œå¿…é¡»è¦å¯¹è¿™äº›ç»„ä»¶è¿›è¡Œä¿æŠ¤æ€§æ‹·è´ã€‚
 	 */
 	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
 		ois.defaultReadObject();

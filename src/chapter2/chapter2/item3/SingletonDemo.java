@@ -7,11 +7,11 @@ import java.io.ObjectStreamException;
 import java.io.Serializable;
 
 /**
- * singletonÑİÊ¾
+ * singletonæ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-12-18
+ * åˆ›å»ºæ—¥æœŸï¼š2010-12-18
  */
 public class SingletonDemo {
 	
@@ -19,22 +19,22 @@ public class SingletonDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// Client¶ËÈçºÎÊ¹ÓÃsingletonÀà
+		// Clientç«¯å¦‚ä½•ä½¿ç”¨singletonç±»
 		System.out.println(Singleton1.INSTANCE);
 		System.out.println(Singleton2.getInstance());
 	}
 }
 
 /**
- * ¹«ÓĞ¾²Ì¬ÓòÊµÏÖµ¥Àı
+ * å…¬æœ‰é™æ€åŸŸå®ç°å•ä¾‹
  */
 class Singleton1 {
 
-	// ÉùÃ÷Ò»¸ö¹«ÓĞ¾²Ì¬³ÉÔ±
+	// å£°æ˜ä¸€ä¸ªå…¬æœ‰é™æ€æˆå‘˜
 	public static final Singleton1 INSTANCE = new Singleton1();
 
 	/**
-	 * Ë½ÓĞµÄ¹¹Ôìº¯Êı£¬±£Ö¤ÁËSingleton1ÊµÀıµÄÈ«¾ÖÎ¨Ò»ĞÔ£¬Ö»ÓĞÒ»¸öÊµÀı(INSTANCE)´æÔÚ
+	 * ç§æœ‰çš„æ„é€ å‡½æ•°ï¼Œä¿è¯äº†Singleton1å®ä¾‹çš„å…¨å±€å”¯ä¸€æ€§ï¼Œåªæœ‰ä¸€ä¸ªå®ä¾‹(INSTANCE)å­˜åœ¨
 	 */
 	private Singleton1() {
 		// do something
@@ -42,44 +42,44 @@ class Singleton1 {
 }
 
 /**
- * ¹«ÓĞ¾²Ì¬·½·¨ÊµÏÖµ¥Àı
+ * å…¬æœ‰é™æ€æ–¹æ³•å®ç°å•ä¾‹
  */
 class Singleton2 implements Serializable {
 
 	private static final long serialVersionUID = -2892082535158192922L;
 	
-	// ÉùÃ÷Ò»¸öË½ÓĞ¾²Ì¬³ÉÔ±
+	// å£°æ˜ä¸€ä¸ªç§æœ‰é™æ€æˆå‘˜
 	private static final Singleton2 INSTANCE = new Singleton2();
 
 	/**
-	 * Ë½ÓĞµÄ¹¹Ôìº¯Êı£¬±£Ö¤ÁËSingleton2ÊµÀıµÄÈ«¾ÖÎ¨Ò»ĞÔ£¬Ö»ÓĞÒ»¸öÊµÀı(INSTANCE)´æÔÚ
+	 * ç§æœ‰çš„æ„é€ å‡½æ•°ï¼Œä¿è¯äº†Singleton2å®ä¾‹çš„å…¨å±€å”¯ä¸€æ€§ï¼Œåªæœ‰ä¸€ä¸ªå®ä¾‹(INSTANCE)å­˜åœ¨
 	 */
 	private Singleton2() {
 		// do something
-		// ¿ÉÒÔÍ¨¹ı·´Éä»úÖÆµ÷ÓÃË½ÓĞ¹¹ÔìÆ÷´´½¨ÊµÀı£¬ÎªÁË·À·¶ÕâÖÖ¹¥»÷£¬¿ÉÒÔĞŞ¸Ä¹¹ÔìÆ÷
-		// ÔÚËü±»ÒªÇó´´½¨µÚ¶ş¸öÊµÀıµÄÊ±ºòÅ×³öÒì³£¡£
+		// å¯ä»¥é€šè¿‡åå°„æœºåˆ¶è°ƒç”¨ç§æœ‰æ„é€ å™¨åˆ›å»ºå®ä¾‹ï¼Œä¸ºäº†é˜²èŒƒè¿™ç§æ”»å‡»ï¼Œå¯ä»¥ä¿®æ”¹æ„é€ å™¨
+		// åœ¨å®ƒè¢«è¦æ±‚åˆ›å»ºç¬¬äºŒä¸ªå®ä¾‹çš„æ—¶å€™æŠ›å‡ºå¼‚å¸¸ã€‚
 		if(INSTANCE != null) {
-			throw new RuntimeException("·Ç·¨·ÃÎÊ");
+			throw new RuntimeException("éæ³•è®¿é—®");
 		}
 	}
 
 	/**
-	 * Í¨¹ı¾²Ì¬·½·¨·µ»ØÍ¬Ò»¸öSingleton2ÊµÀı
+	 * é€šè¿‡é™æ€æ–¹æ³•è¿”å›åŒä¸€ä¸ªSingleton2å®ä¾‹
 	 */
 	public static Singleton2 getInstance() {
 		return INSTANCE;
 	}
 	
 	/**
-	 * Èç¹ûsingletonÀàÊÇ¿ÉĞòÁĞ»¯µÄ£¬ÎªÁËÎ¬»¤²¢±£Ö¤µ¥ÀıĞÔ£¬±ØĞëÉùÃ÷ËùÓĞÊµÀıÓò¶¼ÊÇ transient µÄ£¬²¢ÊµÏÖ±¾·½·¨¡£
+	 * å¦‚æœsingletonç±»æ˜¯å¯åºåˆ—åŒ–çš„ï¼Œä¸ºäº†ç»´æŠ¤å¹¶ä¿è¯å•ä¾‹æ€§ï¼Œå¿…é¡»å£°æ˜æ‰€æœ‰å®ä¾‹åŸŸéƒ½æ˜¯ transient çš„ï¼Œå¹¶å®ç°æœ¬æ–¹æ³•ã€‚
 	 */
 	private Object readResolve() throws ObjectStreamException {
-		return INSTANCE;// ·µ»ØÕæÕıµÄsingletonÊµÀı£¬¶ø²»ÊÇ·´ĞòÁĞ»¯»ØÀ´µÄÊµÀı
+		return INSTANCE;// è¿”å›çœŸæ­£çš„singletonå®ä¾‹ï¼Œè€Œä¸æ˜¯ååºåˆ—åŒ–å›æ¥çš„å®ä¾‹
 	}
 }
 
 /**
- * Ã¶¾ÙÀàĞÍÊµÏÖµ¥Àı£¬Ìá¹©Ô­ÉúµÄĞòÁĞ»¯»úÖÆ£¬·ÀÖ¹¶à´ÎÊµÀı»¯¡¢·ÀÖ¹·´Éä¹¥»÷¡£
+ * æšä¸¾ç±»å‹å®ç°å•ä¾‹ï¼Œæä¾›åŸç”Ÿçš„åºåˆ—åŒ–æœºåˆ¶ï¼Œé˜²æ­¢å¤šæ¬¡å®ä¾‹åŒ–ã€é˜²æ­¢åå°„æ”»å‡»ã€‚
  */
 enum Singleton3 {
 	

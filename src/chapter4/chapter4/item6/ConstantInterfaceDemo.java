@@ -4,17 +4,17 @@
 package chapter4.item6;
 
 /**
- * ³£Á¿½Ó¿ÚÑİÊ¾Àà
+ * å¸¸é‡æ¥å£æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-9
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-9
  */
 public class ConstantInterfaceDemo {
 }
 
 /**
- * ÊıÑ§³£Á¿½Ó¿Ú
+ * æ•°å­¦å¸¸é‡æ¥å£
  */
 interface MathConstant {
 
@@ -22,7 +22,7 @@ interface MathConstant {
 }
 
 /**
- * Ê¹ÓÃÊıÑ§³£Á¿µÄÀàÊµÏÖÁËÕâ¸ö½Ó¿ÚÒÔ±ãÓÚÖ±½ÓÊ¹ÓÃÆäÖĞµÄ³£Á¿
+ * ä½¿ç”¨æ•°å­¦å¸¸é‡çš„ç±»å®ç°äº†è¿™ä¸ªæ¥å£ä»¥ä¾¿äºç›´æ¥ä½¿ç”¨å…¶ä¸­çš„å¸¸é‡
  */
 class MathClass1 implements MathConstant {
 
@@ -32,7 +32,7 @@ class MathClass1 implements MathConstant {
 }
 
 /**
- * ÊıÑ§³£Á¿Àà
+ * æ•°å­¦å¸¸é‡ç±»
  */
 class MathConstants {
 
@@ -44,7 +44,7 @@ class MathConstants {
 }
 
 /**
- * Ê¹ÓÃÊıÑ§³£Á¿µÄÀàÖ±½ÓÊ¹ÓÃMathConstantsÖĞµÄ³£Á¿
+ * ä½¿ç”¨æ•°å­¦å¸¸é‡çš„ç±»ç›´æ¥ä½¿ç”¨MathConstantsä¸­çš„å¸¸é‡
  */
 class MathClass2 {
 

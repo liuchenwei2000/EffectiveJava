@@ -4,11 +4,11 @@
 package chapter5.item3;
 
 /**
- * ÖØÔØ(overload)ºÍ¸²¸Ç(overridden)ÑİÊ¾
+ * é‡è½½(overload)å’Œè¦†ç›–(overridden)æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-19
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-19
  */
 public class OverloadOverriddenDemo {
 
@@ -17,14 +17,14 @@ public class OverloadOverriddenDemo {
 	 */
 	public static void main(String[] args) {
 		A[] as = new A[] { new A(), new A1(), new A2() };
-		// ÖØÔØÑİÊ¾£¬½á¹ûÈçÏÂ£º
+		// é‡è½½æ¼”ç¤ºï¼Œç»“æœå¦‚ä¸‹ï¼š
 //	    sayHello(A a)
 //		sayHello(A a)
 //		sayHello(A a)
 		for (A a : as) {
 			sayHello(a);
 		}
-		// ¸²¸ÇÑİÊ¾£¬½á¹ûÈçÏÂ£º
+		// è¦†ç›–æ¼”ç¤ºï¼Œç»“æœå¦‚ä¸‹ï¼š
 //		A.sayHello()
 //		A1.sayHello()
 //		A2.sayHello()
@@ -34,9 +34,9 @@ public class OverloadOverriddenDemo {
 	}
 
 	/**
-	 * ÏÂÃæÈı¸ö·½·¨ÓÃÀ´ÑİÊ¾ÖØÔØ 
+	 * ä¸‹é¢ä¸‰ä¸ªæ–¹æ³•ç”¨æ¥æ¼”ç¤ºé‡è½½ 
 	 * <p>
-	 * ¶ÔÏóµÄÔËĞĞÊ±ÀàĞÍ¶ÔÓÚÄÄ¸öÖØÔØ°æ±¾½«±»Ö´ĞĞÃ»ÓĞÈÎºÎÓ°Ïì£¬Ñ¡Ôñ¹¤×÷ÊÇÔÚ±àÒëÊ±½øĞĞµÄ£¬ÍêÈ«»ùÓÚ²ÎÊıµÄ±àÒëÊ±ÀàĞÍ¡£
+	 * å¯¹è±¡çš„è¿è¡Œæ—¶ç±»å‹å¯¹äºå“ªä¸ªé‡è½½ç‰ˆæœ¬å°†è¢«æ‰§è¡Œæ²¡æœ‰ä»»ä½•å½±å“ï¼Œé€‰æ‹©å·¥ä½œæ˜¯åœ¨ç¼–è¯‘æ—¶è¿›è¡Œçš„ï¼Œå®Œå…¨åŸºäºå‚æ•°çš„ç¼–è¯‘æ—¶ç±»å‹ã€‚
 	 */
 	static void sayHello(A a) {
 		System.out.println("sayHello(A a)");
@@ -54,9 +54,9 @@ public class OverloadOverriddenDemo {
 class A {
 
 	/**
-	 * Õâ¸ö·½·¨ÓÃÀ´ÑİÊ¾¸²¸Ç
+	 * è¿™ä¸ªæ–¹æ³•ç”¨æ¥æ¼”ç¤ºè¦†ç›–
 	 * <p>
-	 * µ±µ÷ÓÃÒ»¸ö±»¸²¸ÇµÄ·½·¨Ê±£¬¶ÔÏóµÄ±àÒëÊ±ÀàĞÍ²»»áÓ°ÏìÄÄ¸ö·½·¨½«±»Ö´ĞĞ¡£
+	 * å½“è°ƒç”¨ä¸€ä¸ªè¢«è¦†ç›–çš„æ–¹æ³•æ—¶ï¼Œå¯¹è±¡çš„ç¼–è¯‘æ—¶ç±»å‹ä¸ä¼šå½±å“å“ªä¸ªæ–¹æ³•å°†è¢«æ‰§è¡Œã€‚
 	 */
 	public void sayHello() {
 		System.out.println("A.sayHello()");

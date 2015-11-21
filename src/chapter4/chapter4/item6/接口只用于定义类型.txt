@@ -1,13 +1,13 @@
-                                                             �ӿ�ֻ���ڶ�������
+                                                             接口只用于定义类型
 
 
-��ʵ�ֽӿ�ʱ���ӿھͳ䵱��������������ʵ��������(type)����ˣ���ʵ���˽ӿڣ��ͱ����ͻ��˿��Զ�������ʵ��ʵʩĳЩ������
-Ϊ���κ�����Ŀ�Ķ�����ӿ��ǲ�ǡ���ġ�
+类实现接口时，接口就充当可以引用这个类的实例的类型(type)。因此，类实现了接口，就表明客户端可以对这个类的实例实施某些动作。
+为了任何其他目的而定义接口是不恰当的。
 
-��һ�ֽӿڱ���Ϊ�����ӿ�(constant interface)��ʾ���� chapter4.item6.ConstantInterfaceDemo�����ǲ��õ��÷���
-���Ҫ���峣��������ѡ�����¼��ַ�����
-1�������Щ������ĳ�����е����ӿڽ�����أ���Ӧ�ð���Щ�������ӵ��������߽ӿ��С�����Integer.MAX_VALUE��
-2�������Щ������ñ�����һ��ö�����͵ĳ�Ա����ôӦ��ʹ��ö������ enum��
-3���������ʹ��һ������ʵ�����Ĺ�������������Щ������ʾ���� chapter4.item6.ConstantInterfaceDemo��
+有一种接口被称为常量接口(constant interface)，示例见 chapter4.item6.ConstantInterfaceDemo，这是不好的用法。
+如果要定义常量，可以选择如下几种方案：
+1，如果这些常量与某个已有的类或接口紧密相关，就应该把这些常量添加到这个类或者接口中。比如Integer.MAX_VALUE。
+2，如果这些常量最好被看做一个枚举类型的成员，那么应该使用枚举类型 enum。
+3，否则可以使用一个不可实例化的工具类来定义这些常量，示例见 chapter4.item6.ConstantInterfaceDemo。
 
-��֮���ӿ�Ӧ��ֻ�Ǳ������������͵ģ����ǲ�Ӧ�ñ��������峣����
+总之，接口应该只是被用来定义类型的，它们不应该被用来定义常量。

@@ -4,26 +4,26 @@
 package chapter4.item2;
 
 /**
- * ¸´ÊıÀà
+ * å¤æ•°ç±»
  * <p>
- * ÓÃÀ´±íÊ¾ÊıÑ§ÉÏµÄ¸´Êı£ºa + b*i
+ * ç”¨æ¥è¡¨ç¤ºæ•°å­¦ä¸Šçš„å¤æ•°ï¼ša + b*i
  * <p>
- * ÕâÊÇÒ»¸ö²»¿É±äÀà£¬¿ÉÒÔ²Î¼ûJDKµÄBigIntegerÀà¡£
+ * è¿™æ˜¯ä¸€ä¸ªä¸å¯å˜ç±»ï¼Œå¯ä»¥å‚è§JDKçš„BigIntegerç±»ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-1
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-1
  */
 public class ComplexNumber {
 	
-	/** ÏÂÃæÊÇ¿Í»§¶Ë³£ÓÃµÄÊµÀı£¬¹ÄÀø¿Í»§¶ËÖØÓÃÕâĞ©ÒÑÓĞµÄÊµÀı¡£ */
+	/** ä¸‹é¢æ˜¯å®¢æˆ·ç«¯å¸¸ç”¨çš„å®ä¾‹ï¼Œé¼“åŠ±å®¢æˆ·ç«¯é‡ç”¨è¿™äº›å·²æœ‰çš„å®ä¾‹ã€‚ */
 	
 	public static final ComplexNumber ZERO = new ComplexNumber(0, 0);
 	public static final ComplexNumber ONE = new ComplexNumber(1, 0);
 	public static final ComplexNumber I = new ComplexNumber(0, 1);
 
-	private final double realPart;// Êµ²¿
-	private final double imaginaryPart;// Ğé²¿
+	private final double realPart;// å®éƒ¨
+	private final double imaginaryPart;// è™šéƒ¨
 	
 	public ComplexNumber(double realPart, double imaginaryPart) {
 		super();
@@ -31,7 +31,7 @@ public class ComplexNumber {
 		this.imaginaryPart = imaginaryPart;
 	}
 
-	/** ÏÂÃæÊÇÁ½¸öÓòµÄ·ÃÎÊ·½·¨£¬Ã»ÓĞÌá¹©ĞŞ¸Ä·½·¨¡£ */
+	/** ä¸‹é¢æ˜¯ä¸¤ä¸ªåŸŸçš„è®¿é—®æ–¹æ³•ï¼Œæ²¡æœ‰æä¾›ä¿®æ”¹æ–¹æ³•ã€‚ */
 	
 	public double getRealPart() {
 		return realPart;
@@ -41,11 +41,11 @@ public class ComplexNumber {
 		return imaginaryPart;
 	}
 	
-	/** ÏÂÃæÊÇÁ½¸öÔËËã·½·¨¡£ */
+	/** ä¸‹é¢æ˜¯ä¸¤ä¸ªè¿ç®—æ–¹æ³•ã€‚ */
 	
 	/**
-	 * ÕâĞ©ÔËËã·½·¨ÊÇ´´½¨²¢·µ»ØÒ»¸öĞÂµÄComplexNumberÊµÀı£¬¶ø²»ÊÇĞŞ¸Äµ±Ç°Õâ¸öÊµÀı¡£
-	 * ´ó¶àÊıÖØÒªµÄ²»¿É±äÀà¶¼Ê¹ÓÃÁËÕâÖÖÄ£Ê½¡£
+	 * è¿™äº›è¿ç®—æ–¹æ³•æ˜¯åˆ›å»ºå¹¶è¿”å›ä¸€ä¸ªæ–°çš„ComplexNumberå®ä¾‹ï¼Œè€Œä¸æ˜¯ä¿®æ”¹å½“å‰è¿™ä¸ªå®ä¾‹ã€‚
+	 * å¤§å¤šæ•°é‡è¦çš„ä¸å¯å˜ç±»éƒ½ä½¿ç”¨äº†è¿™ç§æ¨¡å¼ã€‚
 	 */
 	public ComplexNumber add(ComplexNumber c) {
 		double resultRealPart = c.getRealPart() + this.getRealPart();
@@ -61,5 +61,5 @@ public class ComplexNumber {
 		return new ComplexNumber(resultRealPart, resultImaginaryPart);
 	}
 	
-	/** ÖîÈçequals¡¢hashCode¡¢toStringµÈ·½·¨ÂÔµô */
+	/** è¯¸å¦‚equalsã€hashCodeã€toStringç­‰æ–¹æ³•ç•¥æ‰ */
 }

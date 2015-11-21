@@ -4,11 +4,11 @@
 package chapter4.item5;
 
 /**
- * Ä£Äâ¶àÖØ¼Ì³Ğ(Simulated Multiple Inheritance)ÑİÊ¾Àà
+ * æ¨¡æ‹Ÿå¤šé‡ç»§æ‰¿(Simulated Multiple Inheritance)æ¼”ç¤ºç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-11
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-11
  */
 public class SimulatedMultipleInheritanceDemo {
 	
@@ -25,7 +25,7 @@ public class SimulatedMultipleInheritanceDemo {
 }
 
 /**
- * ÕâÊÇÒ»¸ö½Ó¿Ú
+ * è¿™æ˜¯ä¸€ä¸ªæ¥å£
  */
 interface Flyable {
 
@@ -33,24 +33,24 @@ interface Flyable {
 }
 
 /**
- * ÕâÊÇÒ»¸ö¹Ç¼ÜÊµÏÖÀà
+ * è¿™æ˜¯ä¸€ä¸ªéª¨æ¶å®ç°ç±»
  */
 abstract class AbstractFlyable implements Flyable {
 
-	// ÆäËûÒ»Ğ©¸¨ÖúĞÔµÄ·½·¨
+	// å…¶ä»–ä¸€äº›è¾…åŠ©æ€§çš„æ–¹æ³•
 }
 
 class Animal {
 }
 
 /**
- * HumanÀàÒÑ¾­¼Ì³ĞÁËAnimal£¬ËùÒÔÎŞ·¨ÔÙ¼Ì³ĞAbstractFlyableÁË¡£
- * ²ÉÓÃÁËÄ£Äâ¶àÖØ¼Ì³ĞµÄ·½Ê½£¬Àà±¾ÉíÊµÏÖFlyable¡£
+ * Humanç±»å·²ç»ç»§æ‰¿äº†Animalï¼Œæ‰€ä»¥æ— æ³•å†ç»§æ‰¿AbstractFlyableäº†ã€‚
+ * é‡‡ç”¨äº†æ¨¡æ‹Ÿå¤šé‡ç»§æ‰¿çš„æ–¹å¼ï¼Œç±»æœ¬èº«å®ç°Flyableã€‚
  */
 class Human extends Animal implements Flyable {
 
 	/**
-	 * ½Ó¿Ú·½·¨µÄÊµÏÖÎ¯ÍĞ¸øÄÚ²¿¶ÔÏó
+	 * æ¥å£æ–¹æ³•çš„å®ç°å§”æ‰˜ç»™å†…éƒ¨å¯¹è±¡
 	 *
 	 * @see chapter4.item16.Flyable#fly()
 	 */
@@ -59,7 +59,7 @@ class Human extends Animal implements Flyable {
 	}
 
 	/**
-	 * Õâ¸öÄÚ²¿Àà¼Ì³ĞÁËAbstractFlyable£¬Íê³ÉÕæÕıµÄ½Ó¿ÚÊµÏÖ¡£
+	 * è¿™ä¸ªå†…éƒ¨ç±»ç»§æ‰¿äº†AbstractFlyableï¼Œå®ŒæˆçœŸæ­£çš„æ¥å£å®ç°ã€‚
 	 */
 	private static class AirPlane extends AbstractFlyable {
 

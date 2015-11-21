@@ -11,27 +11,27 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * ¾ßÓĞ¼ÆÊı¹¦ÄÜµÄSet
+ * å…·æœ‰è®¡æ•°åŠŸèƒ½çš„Set
  * <p>
- * ±¾ÀàÊÇÊ¹ÓÃ¸´ºÏÊµÏÖµÄ£¬³ıÁË»ñµÃÁË½¡×³ĞÔÖ®Íâ£¬Ò²´øÀ´ÁËÁé»îĞÔ¡£
+ * æœ¬ç±»æ˜¯ä½¿ç”¨å¤åˆå®ç°çš„ï¼Œé™¤äº†è·å¾—äº†å¥å£®æ€§ä¹‹å¤–ï¼Œä¹Ÿå¸¦æ¥äº†çµæ´»æ€§ã€‚
  * <p>
- * ±¾ÀàÊÇÒ»¸ö°ü×°Àà(wrapper class)£¬ÊÇ Decorator Ä£Ê½µÄÓ¦ÓÃ¡£
+ * æœ¬ç±»æ˜¯ä¸€ä¸ªåŒ…è£…ç±»(wrapper class)ï¼Œæ˜¯ Decorator æ¨¡å¼çš„åº”ç”¨ã€‚
  *
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-2
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-2
  */
 public class InstrumentedHashSet2<E> implements Set<E> {
 
 	private final Set<E> set;
 	
-	private int counter = 0;// ¼ÆÊıÆ÷
+	private int counter = 0;// è®¡æ•°å™¨
 	
 	/**
-	 * ´Ó±¾ÖÊÉÏ½²£¬Õâ¸öÀà°ÑÒ»¸öSet×ª±ä³ÉÁíÍâÒ»¸öSet£¬Í¬Ê±»¹Ôö¼ÓÁË¼ÆÊıµÄ¹¦ÄÜ¡£
-	 * InstrumentedHashSetÊÇ»ùÓÚ¼Ì³ĞµÄ£¬Ö»ÄÜÎªÒ»¸ö¾ßÌåµÄÀà¶ø¹¤×÷£¬
-	 * ¶ÔÓÚ³¬ÀàËùÖ§³ÖµÄÃ¿Ò»¸ö¹¹Ôìº¯Êı¶¼ÒªÇóÓĞÒ»¸öµ¥¶ÀµÄ¹¹Ôìº¯Êı¡£
-	 * ¶ø±¾Àà¿ÉÒÔÓÃÎªÈÎºÎÒ»¸öSet·şÎñ£¬²¢ÇÒÖ»ÓĞÒ»¸ö¹¹Ôìº¯Êı¡£
+	 * ä»æœ¬è´¨ä¸Šè®²ï¼Œè¿™ä¸ªç±»æŠŠä¸€ä¸ªSetè½¬å˜æˆå¦å¤–ä¸€ä¸ªSetï¼ŒåŒæ—¶è¿˜å¢åŠ äº†è®¡æ•°çš„åŠŸèƒ½ã€‚
+	 * InstrumentedHashSetæ˜¯åŸºäºç»§æ‰¿çš„ï¼Œåªèƒ½ä¸ºä¸€ä¸ªå…·ä½“çš„ç±»è€Œå·¥ä½œï¼Œ
+	 * å¯¹äºè¶…ç±»æ‰€æ”¯æŒçš„æ¯ä¸€ä¸ªæ„é€ å‡½æ•°éƒ½è¦æ±‚æœ‰ä¸€ä¸ªå•ç‹¬çš„æ„é€ å‡½æ•°ã€‚
+	 * è€Œæœ¬ç±»å¯ä»¥ç”¨ä¸ºä»»ä½•ä¸€ä¸ªSetæœåŠ¡ï¼Œå¹¶ä¸”åªæœ‰ä¸€ä¸ªæ„é€ å‡½æ•°ã€‚
 	 */
 	public InstrumentedHashSet2(Set<E> set) {
 		super();
@@ -39,13 +39,13 @@ public class InstrumentedHashSet2<E> implements Set<E> {
 	}
 
 	/**
-	 * ¼ÆÊıÆ÷
+	 * è®¡æ•°å™¨
 	 */
 	public int getCounter() {
 		return counter;
 	}
 
-	/** ÎªÁËÊµÏÖ¼ÆÊı¹¦ÄÜ¶ø¶ÔÏÂÃæµÄÁ½¸ö·½·¨ÂÔÎ¢µ÷Õû */
+	/** ä¸ºäº†å®ç°è®¡æ•°åŠŸèƒ½è€Œå¯¹ä¸‹é¢çš„ä¸¤ä¸ªæ–¹æ³•ç•¥å¾®è°ƒæ•´ */
 	
 	public boolean add(E e) {
 		this.counter++;
@@ -56,7 +56,7 @@ public class InstrumentedHashSet2<E> implements Set<E> {
 		return set.addAll(c);
 	}
 	
-	/** ÏÂÃæÊÇSet±ØĞëÊµÏÖµÄÆäËû·½·¨£¬È«²¿×ª·¢¸ø°ü×°µÄset¶ÔÏó */
+	/** ä¸‹é¢æ˜¯Setå¿…é¡»å®ç°çš„å…¶ä»–æ–¹æ³•ï¼Œå…¨éƒ¨è½¬å‘ç»™åŒ…è£…çš„setå¯¹è±¡ */
 	
 	public int size() {
 		return set.size();
@@ -114,10 +114,10 @@ public class InstrumentedHashSet2<E> implements Set<E> {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		InstrumentedHashSet2<String> iset = new InstrumentedHashSet2<String>(new HashSet<String>());// ¿ÉÒÔ°ü×°HashSet
+		InstrumentedHashSet2<String> iset = new InstrumentedHashSet2<String>(new HashSet<String>());// å¯ä»¥åŒ…è£…HashSet
 		iset.addAll(Arrays.asList(new String[] { "a", "b", "c" }));
 		System.out.println(iset.getCounter());// 3
-		iset = new InstrumentedHashSet2<String>(new TreeSet<String>());// ¿ÉÒÔ°ü×°TreeSet
+		iset = new InstrumentedHashSet2<String>(new TreeSet<String>());// å¯ä»¥åŒ…è£…TreeSet
 		iset.addAll(Arrays.asList(new String[] { "a", "b", "c" }));
 		System.out.println(iset.getCounter());// 3
 	}

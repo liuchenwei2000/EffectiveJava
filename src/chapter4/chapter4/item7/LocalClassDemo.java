@@ -4,11 +4,11 @@
 package chapter4.item7;
 
 /**
- * ¾Ö²¿ÀàµÄÓÃ·¨ÑİÊ¾
+ * å±€éƒ¨ç±»çš„ç”¨æ³•æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-13
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-13
  */
 public class LocalClassDemo {
 	
@@ -16,7 +16,7 @@ public class LocalClassDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// ÕâÊÇÒ»¸ö¾Ö²¿Àà
+		// è¿™æ˜¯ä¸€ä¸ªå±€éƒ¨ç±»
 		class DefaultFlyable implements Flyable {
 
 			private String name;
@@ -32,7 +32,7 @@ public class LocalClassDemo {
 			}
 
 		}
-		// ÔÚ·½·¨ÖĞ¶à´ÎÊ¹ÓÃÁË¸ÃÀà
+		// åœ¨æ–¹æ³•ä¸­å¤šæ¬¡ä½¿ç”¨äº†è¯¥ç±»
 		fly(new DefaultFlyable("bird"));
 		fly(new DefaultFlyable("airplane"));
 	}

@@ -4,11 +4,11 @@
 package chapter2.item7;
 
 /**
- * ÏÔÊ½ÖÕÖ¹·½·¨(Explicit Termination Method)ÑİÊ¾
+ * æ˜¾å¼ç»ˆæ­¢æ–¹æ³•(Explicit Termination Method)æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2010-12-25
+ * åˆ›å»ºæ—¥æœŸï¼š2010-12-25
  */
 public class ExplicitTerminationMethodDemo {
 
@@ -18,9 +18,9 @@ public class ExplicitTerminationMethodDemo {
 	public static void main(String[] args) {
 		ClassWithExplicitTerminationMethod object = new ClassWithExplicitTerminationMethod();
 		/*
-		 * ÏÔÊ½µÄÖÕÖ¹·½·¨Í¨³£Óë try-finally ½á¹¹½áºÏÆğÀ´Ê¹ÓÃ£¬ÒÔÈ·±£¼°Ê±ÖÕÖ¹¡£
-		 * ÔÚfinally×Ó¾äÄÚ²¿µ÷ÓÃÏÔÊ½µÄÖÕÖ¹·½·¨¿ÉÒÔ±£Ö¤£º
-		 * ¼´Ê¹ÔÚ¶ÔÏó±»Ê¹ÓÃµÄÊ±ºòÓĞÒì³£±»Å×³ö£¬¸ÃÖÕÖ¹·½·¨Ò²»á±»Ö´ĞĞ¡£
+		 * æ˜¾å¼çš„ç»ˆæ­¢æ–¹æ³•é€šå¸¸ä¸ try-finally ç»“æ„ç»“åˆèµ·æ¥ä½¿ç”¨ï¼Œä»¥ç¡®ä¿åŠæ—¶ç»ˆæ­¢ã€‚
+		 * åœ¨finallyå­å¥å†…éƒ¨è°ƒç”¨æ˜¾å¼çš„ç»ˆæ­¢æ–¹æ³•å¯ä»¥ä¿è¯ï¼š
+		 * å³ä½¿åœ¨å¯¹è±¡è¢«ä½¿ç”¨çš„æ—¶å€™æœ‰å¼‚å¸¸è¢«æŠ›å‡ºï¼Œè¯¥ç»ˆæ­¢æ–¹æ³•ä¹Ÿä¼šè¢«æ‰§è¡Œã€‚
 		 */
 		try {
 			// do something using object
@@ -33,7 +33,7 @@ public class ExplicitTerminationMethodDemo {
 class ClassWithExplicitTerminationMethod {
 	
 	/**
-	 * ÏÔÊ½µÄÖÕÖ¹·½·¨
+	 * æ˜¾å¼çš„ç»ˆæ­¢æ–¹æ³•
 	 */
 	public void terminate(){
 		// do termination

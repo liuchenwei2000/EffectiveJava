@@ -7,11 +7,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * ÄäÃûÀàµÄµäĞÍÓÃ·¨ÑİÊ¾
+ * åŒ¿åç±»çš„å…¸å‹ç”¨æ³•æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-13
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-13
  */
 public class AnonymouseClassDemo {
 	
@@ -19,7 +19,7 @@ public class AnonymouseClassDemo {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// 1£¬´´½¨Ò»¸öº¯Êı¶ÔÏó(function object)
+		// 1ï¼Œåˆ›å»ºä¸€ä¸ªå‡½æ•°å¯¹è±¡(function object)
 		Integer[] array = { 3, 2, 4, 1 };
 		Arrays.sort(array, new Comparator<Integer>() {
 
@@ -28,7 +28,7 @@ public class AnonymouseClassDemo {
 				return o1 - o2;
 			}
 		});
-		// 2£¬´´½¨Ò»¸ö¹ı³Ì¶ÔÏó(process object)
+		// 2ï¼Œåˆ›å»ºä¸€ä¸ªè¿‡ç¨‹å¯¹è±¡(process object)
 		new Thread(new Runnable() {
 
 			@Override
@@ -43,7 +43,7 @@ public class AnonymouseClassDemo {
 		public void fly();
 	}
 
-	// 3£¬ÎªÄ³ÖÖ¾ßÓĞ·µ»ØÀàĞÍµÄ(·ÇvoidµÄ)·½·¨·µ»Ø¶ÔÏó
+	// 3ï¼Œä¸ºæŸç§å…·æœ‰è¿”å›ç±»å‹çš„(évoidçš„)æ–¹æ³•è¿”å›å¯¹è±¡
 	private static Flyable createDefault() {
 		return new Flyable() {
 

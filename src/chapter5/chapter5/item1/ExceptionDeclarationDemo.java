@@ -4,16 +4,16 @@
 package chapter5.item1;
 
 /**
- * ·½·¨ÉùÃ÷Òì³£ÑÝÊ¾
+ * æ–¹æ³•å£°æ˜Žå¼‚å¸¸æ¼”ç¤º
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-15
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-15
  */
 public class ExceptionDeclarationDemo {
 
 	/**
-	 * ·µ»Ølog(x)µÄÖµ
+	 * è¿”å›žlog(x)çš„å€¼
 	 * 
 	 * @param x
 	 *            which must be positive.

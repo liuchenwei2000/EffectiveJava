@@ -4,13 +4,13 @@
 package chapter2.item2;
 
 /**
- * Builder Ä£Ê½Ê¾Àı
+ * Builder æ¨¡å¼ç¤ºä¾‹
  * <p>
- * Builder Ä£Ê½¼ÈÄÜ±£Ö¤ÖØµş¹¹ÔìÆ÷µÄ°²È«ĞÔ£¬Ò²ÄÜ±£Ö¤ JavaBeans Ä£Ê½µÄ¿É¶ÁĞÔ¡£
+ * Builder æ¨¡å¼æ—¢èƒ½ä¿è¯é‡å æ„é€ å™¨çš„å®‰å…¨æ€§ï¼Œä¹Ÿèƒ½ä¿è¯ JavaBeans æ¨¡å¼çš„å¯è¯»æ€§ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2015Äê7ÔÂ31ÈÕ
+ * åˆ›å»ºæ—¥æœŸï¼š2015å¹´7æœˆ31æ—¥
  */
 public class BuilderPattern {
 
@@ -61,11 +61,11 @@ public class BuilderPattern {
 
 	private static class Book {
 		
-		// Ç°Èı¸öÊÇ±ØĞèÊôĞÔ
+		// å‰ä¸‰ä¸ªæ˜¯å¿…éœ€å±æ€§
 		private final String name;
 		private final String author;
 		private final String isbn;
-		// ºóÈı¸öÊÇ¿ÉÑ¡ÊôĞÔ
+		// åä¸‰ä¸ªæ˜¯å¯é€‰å±æ€§
 		private final int edition;
 		private final double price;
 		private final int pages;

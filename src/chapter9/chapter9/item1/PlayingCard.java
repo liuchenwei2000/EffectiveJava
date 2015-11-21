@@ -4,18 +4,18 @@
 package chapter9.item1;
 
 /**
- * ÆË¿ËÅÆ»¨É«Ã¶¾Ù
+ * æ‰‘å…‹ç‰ŒèŠ±è‰²æšä¸¾
  * <p>
- * 1£¬Ê¹ÓÃ int ³£Á¿µÄ·½Ê½ÊµÏÖÃ¶¾ÙÀàĞÍ¡£
+ * 1ï¼Œä½¿ç”¨ int å¸¸é‡çš„æ–¹å¼å®ç°æšä¸¾ç±»å‹ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-3-14
+ * åˆ›å»ºæ—¥æœŸï¼š2011-3-14
  */
 public class PlayingCard {
 
-	public static final int SUIT_CLUBS = 0;// ºÚÌÒ
-	public static final int SUIT_DIAMONDS = 1;// ·½¿é
-	public static final int SUIT_HEARTS = 2;// ºìÌÒ
-	public static final int SUIT_SPADES = 3;// Ã·»¨
+	public static final int SUIT_CLUBS = 0;// é»‘æ¡ƒ
+	public static final int SUIT_DIAMONDS = 1;// æ–¹å—
+	public static final int SUIT_HEARTS = 2;// çº¢æ¡ƒ
+	public static final int SUIT_SPADES = 3;// æ¢…èŠ±
 }

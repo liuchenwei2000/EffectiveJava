@@ -1,13 +1,13 @@
-                                                                  ����ʵ�����ƣ�ö������������readResolve
+                                                                  对于实例控制，枚举类型优先于readResolve
 
 
-���������������м����ˡ�implements Serializable�������Ͳ�����һ�� Singleton��
-���۸���ʹ����Ĭ�ϵ����л���ʽ�������Զ�������л���ʽ����û�й�ϵ��Ҳ�����Ƿ��ṩ����ʽ�� readObject �����޹ء�
-�κ�һ�� readObject ��������������ʽ�Ļ���Ĭ�ϵģ������᷵��һ���½���ʵ��������½���ʵ����ͬ�ڸ�����������ĵ���ʵ����
+如果单例类的声明中加上了“implements Serializable”，它就不再是一个 Singleton。
+无论该类使用了默认的序列化形式，还是自定义的序列化形式，都没有关系；也跟它是否提供了显式的 readObject 方法无关。
+任何一个 readObject 方法，不管是显式的还是默认的，它都会返回一个新建的实例，这个新建的实例不同于该类最初创建的单例实例。
 
-readResolve ��������ʹ����һ��ʵ������ readObject ������ʵ����ʾ���� chapter8.item4.Singleton��
+readResolve 特性允许使用另一个实例代替 readObject 创建的实例，示例见 chapter8.item4.Singleton。
 
-���Խ�һ�������л���ʵ���ܿص����д��ö�٣��Ϳ��Ծ��Ա�֤�����������ĳ���֮�⣬�����б��ʵ����JVM�Դ��ṩ�˱��ϡ�
+可以将一个可序列化的实例受控的类编写成枚举，就可以绝对保证除了所声明的常量之外，不会有别的实例。JVM对此提供了保障。
 
-��֮��Ӧ�þ����ܵ�ʹ��ö��������ʵʩʵ�����Ƶ�Լ�������������������ͬʱ����Ҫһ���ȿ����л�����ʵ���ܿص��࣬
-�ͱ����ṩһ�� readResolve ��������ȷ�����������ʵ����Ϊ�������ͣ������� transient �ġ�
+总之，应该尽可能地使用枚举类型来实施实例控制的约束条件。如果做不到，同时又需要一个既可序列化又是实例受控的类，
+就必须提供一个 readResolve 方法，并确保该类的所有实例域都为基本类型，或者是 transient 的。

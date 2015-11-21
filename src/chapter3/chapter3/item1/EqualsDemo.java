@@ -4,11 +4,11 @@
 package chapter3.item1;
 
 /**
- * ±ê×¼equals·½·¨ÊµÏÖ
+ * æ ‡å‡†equalsæ–¹æ³•å®žçŽ°
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2011-2-17
+ * åˆ›å»ºæ—¥æœŸï¼š2011-2-17
  */
 public class EqualsDemo {
 }
